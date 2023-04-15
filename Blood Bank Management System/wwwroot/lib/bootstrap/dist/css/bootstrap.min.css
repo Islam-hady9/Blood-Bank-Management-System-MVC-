@@ -349,6 +349,10 @@ th {
     text-align: -webkit-match-parent
 }
 
+table th {
+    text-align: center;
+}
+
 tbody,
 td,
 tfoot,

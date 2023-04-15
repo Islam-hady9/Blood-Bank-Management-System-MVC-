@@ -1,4 +1,4 @@
-﻿
+
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html, body {
@@ -43,12 +43,12 @@ input:focus {
     color: white;
 }
 
-    .remember input {
-        width: 20px;
-        height: 20px;
-        margin-left: 15px;
-        margin-right: 5px;
-    }
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
 
 .login_btn {
     color: white;
@@ -57,7 +57,7 @@ input:focus {
     margin-top: 10%;
 }
 
-    .login_btn:hover {
-        color: black;
-        background-color: white;
-    }
+.login_btn:hover {
+    color: black;
+    background-color: white;
+}

@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "SearchBlood";
+}
+<head>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<div class="search-blood">
+    <table>
+        <!-- Demonstrait the caption -->
+        <caption>Search Blood</caption>
+        <!-- Demonstrait the head -->
+        <thead>
+            <!-- Table raw -->
+            <tr>
+                <!-- Table header -->
+                <th>Blood Type</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <!-- Demonstrait the body -->
+        <tbody>
+            <!-- Demonstrait the first raw -->
+            <tr>
+                <td>A+</td>
+                <td>5</td>
+            </tr>
+            <!-- Demonstrait the second raw -->
+            <tr>
+                <td>O+</td>
+                <td>15</td>
+            </tr>
+            <!-- Demonstrait the third raw -->
+            <tr>
+                <td>C</td>
+                <td>12</td>
+            </tr>
+            <!-- Demonstrait the fourth raw -->
+            <tr>
+                <td>O-</td>
+                <td>3</td>
+            </tr>
+            <!-- Demonstrait the fifth raw -->
+            <tr>
+                <td>O</td>
+                <td>7</td>
+            </tr>
+        </tbody>
+        <!-- Demonstrait the footer -->
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>47</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="search-div">
+        <input type="search" placeholder="Search for products">
+    </div>
+    <div class="button-div">
+        <button>change</button>
+    </div>
+</div>

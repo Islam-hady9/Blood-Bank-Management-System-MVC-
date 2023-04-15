@@ -4,6 +4,12 @@
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 </head>
+<body class="body">
+<form>
+ <input class="back" type="button" value="Back" onclick="history.back()">
+ <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="search-div"></i>search</button>
+</form>
 <table>
     <!-- Demonstrait the caption -->
     <caption>Management</caption>
@@ -89,9 +95,8 @@
         </tr>
     </tfoot>
 </table>
-<div class="search-div">
-    <input type="search" placeholder="Search for products">
-</div>
+
 <div class="button-div">
     <button>change</button>
 </div>
+</body>

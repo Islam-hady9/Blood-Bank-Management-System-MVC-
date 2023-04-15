@@ -35,7 +35,7 @@ namespace Blood_Bank_Management_System.Controllers
             return View();
         }
 
-        public IActionResult Doctor()
+        public IActionResult Donors()
         {
             return View();
         }

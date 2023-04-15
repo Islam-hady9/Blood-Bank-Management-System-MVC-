@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yXGM+G5hoanG2iFspaABM6q5jMPKo5MqM7fkKB+A5/8=",
+  "Hash": "3rznQ50MuMpqm2Vvukbmk1yCVIUycdFMnR5enhPvSyQ=",
   "Source": "Blood Bank Management System",
   "BasePath": "_content/Blood Bank Management System",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\style.css",
+      "SourceId": "Blood Bank Management System",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\",
+      "BasePath": "_content/Blood Bank Management System",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\favicon.ico",

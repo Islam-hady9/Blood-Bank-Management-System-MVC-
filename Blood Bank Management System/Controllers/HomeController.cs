@@ -44,10 +44,15 @@ namespace Blood_Bank_Management_System.Controllers
         {
             return View();
         }
-
-        public IActionResult SearchBlood()
+		
+		public IActionResult SearchBlood()
         {
             return View();
         }
-    }
+
+		public IActionResult Hospitals()
+		{
+			return View();
+		}
+	}
 }

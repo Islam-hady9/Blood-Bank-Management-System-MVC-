@@ -1,4 +1,4 @@
-﻿using Blood_Bank_Management_System.Models;
+using Blood_Bank_Management_System.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -31,6 +31,21 @@ namespace Blood_Bank_Management_System.Controllers
         }
 
         public IActionResult Interface()
+        {
+            return View();
+        }
+
+        public IActionResult Doctor()
+        {
+            return View();
+        }
+
+        public IActionResult Management()
+        {
+            return View();
+        }
+
+        public IActionResult SearchBlood()
         {
             return View();
         }

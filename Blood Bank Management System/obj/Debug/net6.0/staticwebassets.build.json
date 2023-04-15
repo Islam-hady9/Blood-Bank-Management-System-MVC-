@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "msR6/GeUUnuUlIw3FE8Mr9kbW/pV7ykpQM6Y/uPz0J0=",
+  "Hash": "0TIIj4H0TGDE7/CEnc7ynT7yv3bEBlfIAMsSDu9lzQg=",
   "Source": "Blood Bank Management System",
   "BasePath": "_content/Blood Bank Management System",
   "Mode": "Default",
@@ -51,23 +51,6 @@
       "OriginalItemSpec": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Blood Bank Management System.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\12.jpg",
-      "SourceId": "Blood Bank Management System",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\",
-      "BasePath": "_content/Blood Bank Management System",
-      "RelativePath": "css/12.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\12.jpg"
-    },
-    {
       "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\123.jpg",
       "SourceId": "Blood Bank Management System",
       "SourceType": "Discovered",
@@ -83,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\123.jpg"
+    },
+    {
+      "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\blood.png",
+      "SourceId": "Blood Bank Management System",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\",
+      "BasePath": "_content/Blood Bank Management System",
+      "RelativePath": "css/blood.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\blood.png"
+    },
+    {
+      "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\Index.css",
+      "SourceId": "Blood Bank Management System",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\",
+      "BasePath": "_content/Blood Bank Management System",
+      "RelativePath": "css/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
       "Identity": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood Bank Management System\\Blood Bank Management System\\wwwroot\\css\\Interface.css",

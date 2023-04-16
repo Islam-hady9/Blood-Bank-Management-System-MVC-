@@ -86,3 +86,34 @@ C:\Users\Game Coder\Desktop\New folder (2)\Blood-Bank-Management-System-MVC-\Blo
 C:\Users\Game Coder\Desktop\New folder (2)\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.pdb
 C:\Users\Game Coder\Desktop\New folder (2)\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.genruntimeconfig.cache
 C:\Users\Game Coder\Desktop\New folder (2)\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\ref\Blood Bank Management System.dll
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\appsettings.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.staticwebassets.runtime.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.exe
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.deps.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.runtimeconfig.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.dll
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\bin\Debug\net6.0\Blood Bank Management System.pdb
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.csproj.AssemblyReference.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.AssemblyInfoInputs.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.AssemblyInfo.cs
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.csproj.CoreCompileInputs.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.RazorAssemblyInfo.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.RazorAssemblyInfo.cs
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets\msbuild.Blood Bank Management System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets\msbuild.build.Blood Bank Management System.props
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Blood Bank Management System.props
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Blood Bank Management System.props
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\scopedcss\bundle\Blood Bank Management System.styles.css
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\scopedcss\projectbundle\Blood Bank Management System.bundle.scp.css
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.dll
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\refint\Blood Bank Management System.dll
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.pdb
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\Blood Bank Management System.genruntimeconfig.cache
+C:\Users\smart\Desktop\New folder\Blood-Bank-Management-System-MVC-\Blood Bank Management System\obj\Debug\net6.0\ref\Blood Bank Management System.dll

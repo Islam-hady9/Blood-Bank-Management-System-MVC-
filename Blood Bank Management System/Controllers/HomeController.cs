@@ -5,6 +5,7 @@ using System.Diagnostics;
 namespace Blood_Bank_Management_System.Controllers
 {
     // HomeController
+    // Home
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

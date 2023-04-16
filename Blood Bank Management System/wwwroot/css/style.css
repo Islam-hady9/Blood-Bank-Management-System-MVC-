@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
 .body {
     /* <!-- blood name! --> */
     background-image: url("img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
 }
 .inputs {
     text-align: center;

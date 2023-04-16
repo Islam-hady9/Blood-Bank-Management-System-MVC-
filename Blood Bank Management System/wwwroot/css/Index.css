@@ -1,6 +1,10 @@
-﻿body, html {
-    background-image: url('img/images (1).jpeg');
+﻿@import url('https://fonts.googleapis.com/css?family=Numans');
+body, html {
+    background-image: url('img/premium_photo-1671827108313-eaffae392085.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
+    font-family: 'Numans', sans-serif;
 }
 
 #profile-img {

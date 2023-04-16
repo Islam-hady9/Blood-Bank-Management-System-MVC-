@@ -16,7 +16,7 @@ Blood Bank Management System with MVC
 
 **git push -u origin main**
 
-4- pull requests from github to me
+4- pull requests from github to me.
 
 ## How to download changes from Repository to your device:
 

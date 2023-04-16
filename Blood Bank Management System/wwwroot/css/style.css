@@ -44,6 +44,9 @@ table td {
     padding: 1%;
     background-color: #f4c5c5;
 }
+table tfoot td {
+    background-color: #ffbaba;
+}
 /* button */
 .button-div {
     display: flex;

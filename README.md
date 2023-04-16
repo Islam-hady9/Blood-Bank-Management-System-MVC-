@@ -10,17 +10,19 @@ Blood Bank Management System with MVC
 
 3- Write this Commands:
 
-git add .
+**git add .**
 
-git commit -m "Write your commit (What change have you made)"
+**git commit -m "Write your commit (What change have you made)"**
 
-git push -u origin main
+**git push -u origin main**
 
 4- pull requests from github to me
 
 ## How to download changes from Repository to your device:
 
-1- git pull origin
+1- Write this Command:
+
+**git pull origin**
 
 ## Note:
 

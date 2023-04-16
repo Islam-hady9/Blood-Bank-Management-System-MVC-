@@ -1,32 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 .body {
-    /* <!-- blood name! --> */
     background-image: url("img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
     font-family: 'Numans', sans-serif;
-}
-.inputs {
-    text-align: center;
-    width: 100%;
-    margin: 0px auto;
-    font-size: 1em;
 }
 .back {
     font-size: 0.8cm;
     border: 0cm;
+    padding: 5px 12px;
+    border-radius: 5px;
     background-color: #e69393;
     margin-right: 60%;
 }
 table, table td, table th {
-    border: 1.5px solid #e5b2b2;
+    border: 2px solid #e5b2b2;
 }
 table {
     width: 80%;
-    /* height: 90vh; */
     margin: 0 auto;
     font-size: 1.4em;
+    cursor: pointer;
     border-spacing: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -40,10 +34,14 @@ table caption {
 }
 table thead {
     color: #EEE;
-    background-color: #e69393;
+    background-color: #ffb8b8;
+}
+table tbody tr:hover td {
+    color: white;
+    background-color: #ffd3d3;
 }
 table td {
-    padding: 1.8% 1%;
+    padding: 1%;
     background-color: #f4c5c5;
 }
 /* button */
@@ -67,18 +65,4 @@ button:hover {
 }
 button:active {
     background-color: #fe9696;
-}
-/* search-div */
-.search-div {
-    text-align: center;
-    background-color: #ffe0e0;
-    height: 5vh;
-}
-.search-div input {
-    width: 80%;
-    height: 5vh;
-    font-size: 1em;
-}
-.search-div input:focus {
-    outline: none;
 }

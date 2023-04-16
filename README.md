@@ -20,7 +20,7 @@ git push -u origin main
 
 ## How to download changes from Repository to your device:
 
-1- git pull origin.
+1- git pull origin
 
 ## Note:
 

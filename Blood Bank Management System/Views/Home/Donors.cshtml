@@ -3,13 +3,13 @@
 }
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link href="~/css/glyphicon.css" rel="stylesheet">
 </head>
 <body class="body">
-    <form>
-        <input class="back" type="button" value="Back" onclick="history.back()">
-        <input id="search" type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="search-div"></i>search</button>
-    </form>
+    <section>
+        <input type="text" placeholder="Search..." name="search">
+        <button><span class="glyphicon glyphicon-search"></span>search</button>
+    </section>
     <table>
         <!-- Demonstrait the caption -->
         <caption>Donors</caption>

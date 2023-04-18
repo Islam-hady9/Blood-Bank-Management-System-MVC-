@@ -9,9 +9,9 @@ body, html {
 
 #profile-img {
     height: 180px;
-    margin-top: 50%;
+    margin-bottom: 10px;
 }
 
 .h-80 {
-    height: 80% !important;
+    height: 80vh;
 }

@@ -7,18 +7,15 @@
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
 </head>
-<body>
-    <form>
-        <input class="back" type="button" value="Back" onclick="history.back()">
-        <input id="search" type="text" placeholder="Blood Type" name="search">
-        <button type="submit"><i class="search-div"></i>search</button>
-    </form>
+<body class="body">
+    <section>
+        <input type="text" placeholder="Search..." name="search">
+        <button><span class="glyphicon glyphicon-search"></span>search</button>
+    </section>
     <table>
         <caption>Requests</caption>
-        <thead>
-            <!-- Table raw -->
+        <thead>   
             <tr>
-                <!-- Table header -->
                 <th>Number</th>
                 <th>Hospital Name</th>
                 <th>E-mail</th>
@@ -28,9 +25,7 @@
                 <th>Request Status</th>
             </tr>
         </thead>
-        <!-- Demonstrait the body -->
         <tbody>
-            <!-- Demonstrait the first raw -->
             <tr>
                 <td>1</td>
                 <td>Almabara</td>
@@ -54,6 +49,15 @@
            
             <tr>
                 <td>3</td>
+                <td>Alhayat</td>
+                <td>alhayat@gmail.com</td>
+                <td>Assiut</td>
+                <td>B+</td>
+                <td>600</td>
+                <td>Rejected</td>
+            </tr>
+            <tr>
+                <td>4</td>
                 <td>Dar Al Shifa</td>
                 <td>daralshifa@gmail.com</td>
                 <td>Assiut</td>
@@ -61,8 +65,15 @@
                 <td>100</td>
                 <td>Accepted</td>
             </tr>
-       
-  
+            <tr>
+                <td>5</td>
+                <td>Oteify</td>
+                <td>otify@gmail.com</td>
+                <td>Assiut</td>
+                <td>AB</td>
+                <td>800</td>
+                <td>Accepted</td>
+            </tr>
         </tbody>
     </table>
     <div class="button-div">

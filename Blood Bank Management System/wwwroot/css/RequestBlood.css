@@ -1,0 +1,37 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Numans');
+body {
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Numans', sans-serif;
+}
+.reqbutton {
+    display: flex;
+    justify-content: space-around;
+}
+.reqbutton .button {
+        border: 0px;
+        color: #fff;
+        font-size: 20px;
+        padding: 15px 30px 15px 30px;
+        border-radius: 5px;
+        margin-top: 1.3%;
+        text-transform: capitalize;
+        background-color: #f57f7f;
+ }
+#button1
+{
+    margin-top:150px;
+}
+#button2{
+    margin-top:50px;
+    margin-bottom:100px;
+}
+.button:hover {
+    cursor: pointer;
+    background-color: #ff6c6c;
+}
+
+
+

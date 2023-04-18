@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "ViewRequests";
+}
+<head>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+    <form>
+        <input class="back" type="button" value="Back" onclick="history.back()">
+        <input id="search" type="text" placeholder="Blood Type" name="search">
+        <button type="submit"><i class="search-div"></i>search</button>
+    </form>
+    <table>
+        <caption>Requests</caption>
+        <thead>
+            <!-- Table raw -->
+            <tr>
+                <!-- Table header -->
+                <th>Number</th>
+                <th>Hospital Name</th>
+                <th>E-mail</th>
+                <th>Address</th>
+                <th>Blood Type</th>
+                <th>Quantity</th>
+                <th>Request Status</th>
+            </tr>
+        </thead>
+        <!-- Demonstrait the body -->
+        <tbody>
+            <!-- Demonstrait the first raw -->
+            <tr>
+                <td>1</td>
+                <td>Almabara</td>
+                <td>almabara@gmail.com</td>
+                <td>Assiut</td>
+                <td>A+</td>
+                <td>500</td>
+                <td>Accepted</td>
+               
+            </tr>
+      
+            <tr>
+                <td>2</td>
+                <td>Alhelal</td>
+                <td>alhelal@gmail.com</td>
+                <td>Assiut</td>
+                <td>O+</td>
+                <td>200</td>
+                <td>Not enough</td>
+            </tr>
+           
+            <tr>
+                <td>3</td>
+                <td>Dar Al Shifa</td>
+                <td>daralshifa@gmail.com</td>
+                <td>Assiut</td>
+                <td>A-</td>
+                <td>100</td>
+                <td>Accepted</td>
+            </tr>
+       
+  
+        </tbody>
+    </table>
+    <div class="button-div">
+        <button>change</button>
+    </div>
+</body>

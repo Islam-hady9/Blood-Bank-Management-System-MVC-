@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "RequestBlood";
+}
+<head>
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+	
+</head>
+
+<body>
+    <form>
+        <div>
+        <input class="back" type="button" value="Back" onclick="history.back()">
+        </div>
+        <div>
+            <div class="reqbutton">
+                <input id="button1" class="button" type="button" value="send a Request" onclick="location.href='@Url.Action("SendRequest","Home")'"> 
+            </div>
+            <div class="reqbutton">
+            <input id="button2" class="button" type="button" value="View Requests" onclick="location.href='@Url.Action("ViewRequests","Home")'">
+            </div>
+        </div>
+    </form>
+</body>

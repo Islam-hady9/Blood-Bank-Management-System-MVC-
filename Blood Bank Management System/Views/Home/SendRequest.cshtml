@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/Request.css" type="text/css" />
+</head>
+<body>
+    <input id="bttn" class="back" type="button" value="Back" onclick="history.back()">
+    <div class="tableDiv">
+        <table class="table">
+            <tr>
+                <td><h4>To:</h4> </td>
+                <td>
+                    <input type="text" class="form-control" placeholder="Hospital Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td><h4>Email:</h4></td>
+                <td>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Hospital Email" required>
+                </td>
+            </tr>
+            <tr>
+                <td><h4>Blood Type:</h4></td>
+                <td>
+                    <form id="select">
+                        <label placeholder="Choose..."></label>
+                        <select id="type">
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td><h4>Quantity:</h4></td>
+                <td>
+                    <input type="number" class="form-control" placeholder="mml" required>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="bttn">
+        <button type="submit">Send</button>
+    </div>
+</body>

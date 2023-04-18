@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\css\\Interface.css"
     },
     {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\RequestBlood.css",
+      "PackagePath": "staticwebassets\\css\\RequestBlood.css"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\SendRequest.css",
+      "PackagePath": "staticwebassets\\css\\SendRequest.css"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\glyphicon.css",
+      "PackagePath": "staticwebassets\\css\\glyphicon.css"
+    },
+    {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\img\\background.jpg",
       "PackagePath": "staticwebassets\\css\\img\\background.jpg"
     },
@@ -39,6 +51,26 @@
     {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\js\\site.js",

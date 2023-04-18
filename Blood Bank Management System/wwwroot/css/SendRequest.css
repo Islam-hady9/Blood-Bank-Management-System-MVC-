@@ -1,9 +1,10 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css?family=Numans');
 body {
     background-image: url('img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    font-family: 'Numans', sans-serif;
 }
 
 .tableDiv {

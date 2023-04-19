@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\AIO\\.nuget\\packages\\": {}
+    "C:\\Users\\Game Coder\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AIO\\Desktop\\Team Project\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "projectUniqueName": "C:\\Users\\Game Coder\\Desktop\\New folder (2)\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
       "projectName": "Blood Bank Management System",
-      "projectPath": "C:\\Users\\AIO\\Desktop\\Team Project\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
-      "packagesPath": "C:\\Users\\AIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AIO\\Desktop\\Team Project\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
+      "projectPath": "C:\\Users\\Game Coder\\Desktop\\New folder (2)\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "packagesPath": "C:\\Users\\Game Coder\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Game Coder\\Desktop\\New folder (2)\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\AIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Game Coder\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,26 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Numans');
-/* body, html {
-    /* background-image: url('img/premium_photo-1671827108313-eaffae392085.png'); *
-    /* background-size: cover; *
-    /* background-repeat: no-repeat; 
-    height: 100%;
-    font-family: 'Numans', sans-serif;
-}
-
-#profile-img {
-    height: 180px;
-    margin-bottom: 10px;
-}
-
-.h-80 {
-    height: 80vh;
-} */
 main {
     width: 960px;
     margin: 1% auto;
     text-align: center;
     text-transform: capitalize;
-   
 }
 main .images {
     height: 540px;
@@ -37,4 +20,11 @@ main .images {
 }
 main button {
     margin-top: 3%;
+}
+button a {
+    text-decoration: none;
+    color: white;
+}
+button a:hover {
+    color: black;
 }

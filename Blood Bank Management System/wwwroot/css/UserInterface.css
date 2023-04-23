@@ -11,6 +11,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Numans', sans-serif;
 }
 .header h2 {
     color: rgb(250, 8, 56);

@@ -18,7 +18,12 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult RedirectToInterface()
+        {
+            return View("/Views/Home/Interface.cshtml");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
@@ -29,7 +34,12 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-		public IActionResult Donors()
+        public IActionResult RedirectToHospitals()
+        {
+            return View("/Views/Home/Hospitals.cshtml");
+        }
+
+        public IActionResult Donors()
 		{
 			return View();
 		}

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj": {}
+    "C:\\Users\\Specialest\\Desktop\\Repo\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj": {}
   },
   "projects": {
-    "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj": {
+    "C:\\Users\\Specialest\\Desktop\\Repo\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+        "projectUniqueName": "C:\\Users\\Specialest\\Desktop\\Repo\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
         "projectName": "Blood Bank Management System",
-        "projectPath": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
-        "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
+        "projectPath": "C:\\Users\\Specialest\\Desktop\\Repo\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+        "packagesPath": "C:\\Users\\Specialest\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Specialest\\Desktop\\Repo\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\smart\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Specialest\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

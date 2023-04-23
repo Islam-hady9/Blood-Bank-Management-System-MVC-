@@ -1,5 +1,52 @@
 ﻿@{
 	ViewData["Title"] = "Hospitals";
 }
-<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="~/css/UserInterface.css"/>
+    <title>Project Interface</title>
+</head>
+<body>
+    <div class="main">
+     <div class="project-card">
+       <div class="images">
+                    <img src="~/css/img/Request.jpg" />
+       </div>
+       <div class="project-info">
+
+                    <a href="https://localhost:44306/Home/RequestBlood" class="more-details">RequestBlood/Plasma<br><i class="fa-regular fa-paper-plane"></i></a>
+       </div>
+      </div>
+      <div class="project-card">
+        <div class="images">
+                    <img src="~/css/img/Search.jpg" />
+        </div>
+        <div class="project-info">
+                    <a href="https://localhost:44306/Home/SearchBlood" class="more-details">Search Blood/Plasma<br><i class="fa-solid fa-magnifying-glass"></i> </a>
+        </div>
+       </div>
+       <div class="project-card">
+        <div class="images">
+                    <img src="~/css/img/donor.jpg" />
+      </div>
+      <div class="project-info">
+                    <a href="https://localhost:44306/Home/Donors" class="more-details">Donors<br><i class="fa-solid fa-hand-holding-droplet"></i></a>
+                </div>
+     </div>
+     <div class="project-card">
+        <div class="images">
+                    <img src="~/css/img/Managment.jpg" />
+      </div>
+      <div class="project-info">
+                    <a href="https://localhost:44306/Home/Management" class="more-details">Management<br><i class="fa-solid fa-user-doctor"></i><i class="fa-solid fa-user-nurse"></i></a>
+                </div>
+     </div>
+
+
+
+    </div>
+</body>
+</html>

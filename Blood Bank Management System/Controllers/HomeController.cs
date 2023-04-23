@@ -18,11 +18,6 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-        public IActionResult RedirectToInterface()
-        {
-            return View("/Views/Home/Interface.cshtml");
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
 		{
@@ -34,9 +29,9 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-        public IActionResult RedirectToHospitals()
+        public IActionResult RedirectToInterface()
         {
-            return View("/Views/Home/Hospitals.cshtml");
+            return View("/Views/Home/Interface.cshtml");
         }
 
         public IActionResult Donors()
@@ -44,34 +39,69 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-		public IActionResult Management()
+        public IActionResult RedirectToDonors()
+        {
+            return View("/Views/Home/Donors.cshtml");
+        }
+
+        public IActionResult Management()
 		{
 			return View();
 		}
 
-		public IActionResult SearchBlood()
+        public IActionResult RedirectToManagement()
+        {
+            return View("/Views/Home/Management.cshtml");
+        }
+
+        public IActionResult SearchBlood()
 		{
 			return View();
 		}
 
-		public IActionResult Hospitals()
+        public IActionResult RedirectToSearchBlood()
+        {
+            return View("/Views/Home/SearchBlood.cshtml");
+        }
+
+        public IActionResult Hospitals()
 		{
 			return View();
 		}
 
-		public IActionResult RequestBlood()
+        public IActionResult RedirectToHospitals()
+        {
+            return View("/Views/Home/Hospitals.cshtml");
+        }
+
+        public IActionResult RequestBlood()
 		{
 			return View();
 		}
 
-		public IActionResult SendRequest()
+        public IActionResult RedirectToRequestBlood()
+        {
+            return View("/Views/Home/RequestBlood.cshtml");
+        }
+
+        public IActionResult SendRequest()
 		{
 			return View();
 		}
 
-		public IActionResult ViewRequests()
+        public IActionResult RedirectToSendRequest()
+        {
+            return View("/Views/Home/SendRequest.cshtml");
+        }
+
+        public IActionResult ViewRequests()
 		{
 			return View();
+		}
+
+		public IActionResult RedirectToViewRequests()
+		{
+			return View("/Views/Home/ViewRequests.cshtml");
 		}
 	}
 }

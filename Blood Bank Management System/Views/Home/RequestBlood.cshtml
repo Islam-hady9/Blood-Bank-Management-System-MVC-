@@ -13,10 +13,12 @@
         
         <div>
             <div class="reqbutton">
-                <input id="button1" class="button" type="button" value="send a Request" onclick="location.href='@Url.Action("SendRequest","Home")'"> 
+                <input id="button1" class="button" type="submit" value="send a Request"
+                       a asp-controller="Home" asp-action="RedirectToSendRequest" />
             </div>
             <div class="reqbutton">
-            <input id="button2" class="button" type="button" value="View Requests" onclick="location.href='@Url.Action("ViewRequests","Home")'">
+                <input id="button2" class="button" type="submit" value="View Requests"
+                       a asp-controller="Home" asp-action="RedirectToViewRequests" />
             </div>
         </div>
     </form>

@@ -5,7 +5,7 @@
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .body {
-    background-image: url("img/background.jpg");
+    background-image: url("img/back2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Numans', sans-serif;

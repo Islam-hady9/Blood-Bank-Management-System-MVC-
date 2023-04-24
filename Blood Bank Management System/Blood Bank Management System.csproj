@@ -7,4 +7,25 @@
     <RootNamespace>Blood_Bank_Management_System</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\css\img\11.jpg" />
+    <Content Remove="wwwroot\css\img\240_F_292862276_RgolVVyB8maqBg4Gb52Tn3LCMMbieuTw.jpg" />
+    <Content Remove="wwwroot\css\img\555.jpg" />
+    <Content Remove="wwwroot\css\img\background %282%29.jpg" />
+    <Content Remove="wwwroot\css\img\background %283%29.jpg" />
+    <Content Remove="wwwroot\css\img\background.jpg" />
+    <Content Remove="wwwroot\css\img\blood-donor-hands-red-heart-260nw-1530430073.webp" />
+    <Content Remove="wwwroot\css\img\blood.png" />
+    <Content Remove="wwwroot\css\img\concept-give-blood-donation-transfusion-260nw-2106478211.webp" />
+    <Content Remove="wwwroot\css\img\download.png" />
+    <Content Remove="wwwroot\css\img\image.jpg" />
+    <Content Remove="wwwroot\css\img\images.jpg" />
+    <Content Remove="wwwroot\css\img\images22.jpg" />
+    <Content Remove="wwwroot\css\img\world-blood-donor-background-free-vector.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\img\image22.jpg" />
+  </ItemGroup>
+
 </Project>

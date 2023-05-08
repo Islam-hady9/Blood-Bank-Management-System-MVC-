@@ -61,13 +61,13 @@ button {
     background-color: #fe9696;
 }
 /* section-button */
-section button {
+section button, dialog button {
     color: #dc3545;
     font-size: 25px;
     padding: 3px 15px;
     border: 2px solid #dc3545;
 }
-section button:hover {
+section button:hover, dialog button:hover {
     color: white;
     cursor: pointer;
     background-color: #dc3545;

@@ -4,8 +4,23 @@
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link href="~/css/glyphicon.css" rel="stylesheet">
+    <link href="~/css/pop-up.css" rel="stylesheet">
 </head>
 <body class="body">
+    <dialog id="dialog_1">
+        <h2>select your choice</h2>
+        <!-- Male -->
+        <input id="radio_1" type="radio" name="choice" checked>
+        <label>Add</label>
+        <!-- Female -->
+        <input id="radio_2" type="radio" name="choice">
+        <label>Remove</label>
+        <!-- Default -->
+        <input id="radio_3" type="radio" name="choice">
+        <label>Delete</label><br>
+        <!-- button -->
+        <button id="Done">Done</button>
+    </dialog>
     <section>
         <input type="text" placeholder="Search..." name="search">
         <button><span class="glyphicon glyphicon-search"></span>search</button>
@@ -60,7 +75,8 @@
             </tfoot>
         </table>
         <div class="button-div">
-            <button>change</button>
+            <button id="change">change</button>
         </div>
+    <script src="~/js/pop-up.js"></script>
     </div>
 </body>

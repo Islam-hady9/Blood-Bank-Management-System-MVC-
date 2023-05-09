@@ -41,7 +41,7 @@ namespace Blood_Bank_Management_System.Models
             if (match.Success)
                 this.hospitalName = hospitalName;
             else
-                Console.Write(hospitalName + " is incorrect");
+                throw new ArgumentException(hospitalName + " is incorrect");
         }
         public string GetHospitalName()
         {
@@ -56,7 +56,7 @@ namespace Blood_Bank_Management_System.Models
             if (match.Success)
                 this.hospitalEmail = hospitalEmail;
             else
-                Console.Write(hospitalEmail + " is incorrect");
+                throw new ArgumentException(hospitalEmail + " is incorrect");
         }
         public string GetHospitalEmail()
         {
@@ -69,7 +69,7 @@ namespace Blood_Bank_Management_System.Models
             if (hospitalId != 0)
                 this.hospitalId = hospitalId;
             else
-                Console.Write(hospitalId + " is incorrect");
+                throw new ArgumentException(hospitalId + " is incorrect");
         }
         public int GetHospitalId()
         {
@@ -84,7 +84,7 @@ namespace Blood_Bank_Management_System.Models
             if (match.Success)
                 this.hospitalLocation = hospitalLocation;
             else
-                Console.Write(hospitalLocation + " is incorrect");
+                throw new ArgumentException(hospitalLocation + " is incorrect");
         }
         public string GetHospitalLocation()
         {
@@ -99,7 +99,7 @@ namespace Blood_Bank_Management_System.Models
             if (match.Success)
                 this.hospitalPhone = hospitalPhone;
             else
-                Console.Write(hospitalPhone + " is incorrect");
+                throw new ArgumentException(hospitalPhone + " is incorrect");
         }
         public string GetHospitalPhone()
         {
@@ -112,7 +112,7 @@ namespace Blood_Bank_Management_System.Models
             if (receiveUnit != 0)
                 this.receivedUnits = receiveUnit;
             else
-                Console.Write(receiveUnit + " is incorrect");
+                throw new ArgumentException(receiveUnit + " is incorrect");
         }
         public int GetReceiveUnits()
         {
@@ -125,7 +125,7 @@ namespace Blood_Bank_Management_System.Models
             if (DateOfAcception >= DateTime.Now)
                 this.DateOfAcception = DateOfAcception;
             else
-                Console.Write(DateOfAcception + " is incorrect");
+                throw new ArgumentException(DateOfAcception + " is incorrect");
         }
         public DateTime GetDateOfAcception()
         {

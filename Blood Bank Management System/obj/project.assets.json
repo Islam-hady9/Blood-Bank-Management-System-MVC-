@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "projectUniqueName": "C:\\Users\\Specialest\\Desktop\\software\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
       "projectName": "Blood Bank Management System",
-      "projectPath": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "projectPath": "C:\\Users\\Specialest\\Desktop\\software\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
       "packagesPath": "C:\\Users\\Specialest\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
+      "outputPath": "C:\\Users\\Specialest\\Desktop\\software\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Specialest\\AppData\\Roaming\\NuGet\\NuGet.Config",

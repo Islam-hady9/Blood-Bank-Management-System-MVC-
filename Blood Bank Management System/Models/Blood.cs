@@ -18,15 +18,36 @@
         // Argument Constructor
         public Blood(int bloodID, BloodType bloodType, float bloodQuantity)
         {
-            this.bloodID = bloodID;
+            if (bloodID > 0)
+            {
+                this.bloodID = bloodID;
+            }
+            else
+            {
+                throw new ArgumentException("Blood ID must be greater than 0");
+            }
             this.bloodType = bloodType;
-            this.bloodQuantity = bloodQuantity;
+            if (bloodQuantity >= 0.0f)
+            {
+                this.bloodQuantity = bloodQuantity;
+            }
+            else
+            {
+                throw new ArgumentException("Blood Quantity must be greater than or equal to 0");
+            }
         }
 
         //Setters
         public void SetBloodID(int bloodID)
         {
-            this.bloodID = bloodID;
+            if (bloodID > 0)
+            {
+                this.bloodID = bloodID;
+            }
+            else
+            {
+                throw new ArgumentException("Blood ID must be greater than 0");
+            }
         }
         public void SetBloodType(BloodType bloodType)
         {
@@ -34,7 +55,14 @@
         }
         public void SetBloodQuantity()
         {
-            this.bloodQuantity = bloodQuantity;
+            if (bloodQuantity >= 0.0f)
+            {
+                this.bloodQuantity = bloodQuantity;
+            }
+            else
+            {
+                throw new ArgumentException("Blood Quantity must be greater than or equal to 0");
+            }
         }
 
         //Getter

@@ -53,7 +53,7 @@
         {
             this.bloodType = bloodType;
         }
-        public void SetBloodQuantity()
+        public void SetBloodQuantity(float bloodQuantity)
         {
             if (bloodQuantity >= 0.0f)
             {

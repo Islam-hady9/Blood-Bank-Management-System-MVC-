@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mohammed\\.nuget\\packages\\": {}
+    "C:\\Users\\Specialest\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mohammed\\Downloads\\cmder\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "projectUniqueName": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
       "projectName": "Blood Bank Management System",
-      "projectPath": "C:\\Users\\Mohammed\\Downloads\\cmder\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
-      "packagesPath": "C:\\Users\\Mohammed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mohammed\\Downloads\\cmder\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
+      "projectPath": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
+      "packagesPath": "C:\\Users\\Specialest\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Specialest\\Desktop\\SoftProject\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Mohammed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Specialest\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

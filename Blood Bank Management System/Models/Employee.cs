@@ -16,11 +16,11 @@ namespace Blood_Bank_Management_System.Models
         // Default Constructor.
         public Employee()
         {
-            this.employeeName = "";
-            this.employeeID = "";
-            this.employeePhone = "";
-            this.employeeAddress = "";
-            this.employeeEmail = "";
+            this.employeeName = string.Empty;
+            this.employeeID = string.Empty;
+            this.employeePhone = string.Empty;
+            this.employeeAddress = string.Empty;
+            this.employeeEmail = string.Empty;
             this.employeeAge = 25;
             this.field = EmployeeType.Manager;
         }

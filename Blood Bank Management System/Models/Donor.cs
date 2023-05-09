@@ -39,7 +39,7 @@ namespace Blood_Bank_Management_System.Models
             this.donorAge = 18;
             this.donorGender = Gender.Male;
             this.donorBloodType = BloodType.A;
-            this.lastDonationDate = DateTime.MinValue;
+            this.lastDonationDate = DateTime.Now;
         }
 
         // Argument Constructor...

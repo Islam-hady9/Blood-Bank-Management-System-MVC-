@@ -1,42 +1,41 @@
 ﻿using System.Text.RegularExpressions;
-
 namespace Blood_Bank_Management_System.Models
 {
     public class Request
     {
 
-        public string requestID { get; set; }
-        public bool requestStatus { get; set; } // accept or reject
-        public float bloodQuantity { get; set; }
-        public DateTime requestDate { get; set; }
-
-        public BloodType bType { get; set; }
+        private int requestID { get; set; }
+        private bool requestStatus { get; set; } // accept or reject
+        private float requestBloodQuantity { get; set; }
+        private DateTime requestDate { get; set; }
+        private BloodType requestBloodType { get; set; }
 
         // Default Constructor...
         public Request()
         {
-            this.requestID = string.Empty;
+            this.requestID = 0;
             this.requestStatus = true;
-            this.bloodQuantity = 500;
+            this.requestBloodQuantity = 500;
             this.requestDate = DateTime.Now;
-            this.bType = BloodType.A;
+            this.requestBloodType = BloodType.A;
 
         }
         // Argument Constructor...
-        public Request(string requestID, bool requestStatus, float bloodQuantity, DateTime requestDate, BloodType bType)
+        public Request(int requestID, bool requestStatus, float requestBloodQuantity, DateTime requestDate, BloodType requestBloodType)
         {
-            if (requestID.Length == 14 && Regex.IsMatch(requestID, "^[0-9]+$"))
+            if (requestID < 0)
             {
-                this.requestID = requestID;
+                throw new ArgumentException("Invalid ID");
             }
             else
             {
-                throw new ArgumentException("Donor ID must be 14 characters long");
+                this.requestID = requestID;
+
             }
 
-            if (bloodQuantity < 5000)
+            if (requestBloodQuantity < 5000)
             {
-                this.bloodQuantity = 500;
+                this.requestBloodQuantity = 500;
                 this.requestStatus = true;
 
             }
@@ -47,30 +46,30 @@ namespace Blood_Bank_Management_System.Models
             }
 
             this.requestDate = DateTime.Now;
-            this.bType = BloodType.A;
+            this.requestBloodType = BloodType.A;
 
         }
         //Setters...
-        public void SetRequestID(string requestID)
+        public void SetRequestID(int requestID)
         {
-            if (requestID.Length == 14 && Regex.IsMatch(requestID, "^[0-9]+$"))
+            if (requestID < 0)
             {
-                this.requestID = requestID;
+                throw new ArgumentException("Invalid ID");
             }
             else
             {
-                throw new ArgumentException("Donor ID must be 14 characters long");
+                this.requestID = requestID;
             }
         }
         public void SetRequestStatus(bool requestStatus)
         {
             this.requestStatus = requestStatus;
         }
-        public void SetBloodQuantity(float bloodQuantity)
+        public void SetBloodQuantity(float requestBloodQuantity)
         {
-            if (bloodQuantity < 5000)
+            if (requestBloodQuantity < 5000)
             {
-                this.bloodQuantity = bloodQuantity;
+                this.requestBloodQuantity = requestBloodQuantity;
                 this.requestStatus = true;
 
             }
@@ -84,26 +83,26 @@ namespace Blood_Bank_Management_System.Models
         {
             this.requestDate = requestDate;
         }
-        public void SetBloodType(BloodType bType)
+        public void SetRequestBloodType(BloodType requestBloodType)
         {
-            this.bType = bType; ;
+            this.requestBloodType = requestBloodType; ;
         }
         //Getters...
-        public string GetRequestID()
+        public int GetRequestID()
         {
             return this.requestID;
         }
-        public float GetBloodQuantity()
+        public float GetRequestBloodQuantity()
         {
-            return bloodQuantity;
+            return requestBloodQuantity;
         }
         public DateTime GetRequestDate()
         {
             return requestDate;
         }
-        public BloodType GetBloodType()
+        public BloodType GetRequestBloodType()
         {
-            return bType;
+            return requestBloodType;
         }
         public bool GetRequestStatus()
         {

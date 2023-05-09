@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\css\\img\\premium_photo-1671827108313-eaffae392085.png"
     },
     {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\pop-up.css",
+      "PackagePath": "staticwebassets\\css\\pop-up.css"
+    },
+    {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -123,6 +127,10 @@
     {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\fonts\\glyphicons-halflings-regular.woff2",
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\js\\pop-up.js",
+      "PackagePath": "staticwebassets\\js\\pop-up.js"
     },
     {
       "Id": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\wwwroot\\js\\site.js",

@@ -47,10 +47,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNYW5hZ2VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Game Coder/Desktop/Blood-Bank-Management-System-MVC-/Blood-Bank-Management-System-MVC-/Blood Bank Management System/Views/Home/Registration.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Game Coder/Desktop/Blood-Bank-Management-System-MVC-/Blood-Bank-Management-System-MVC-/Blood Bank Management System/Views/Home/RequestBlood.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXF1ZXN0Qmxvb2QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -69,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Game Coder/Desktop/Blood-Bank-Management-System-MVC-/Blood-Bank-Management-System-MVC-/Blood Bank Management System/Views/Home/ViewRequests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaWV3UmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Game Coder/Desktop/Blood-Bank-Management-System-MVC-/Blood-Bank-Management-System-MVC-/Blood Bank Management System/Views/Hospital/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9zcGl0YWxcUmVnaXN0cmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Game Coder/Desktop/Blood-Bank-Management-System-MVC-/Blood-Bank-Management-System-MVC-/Blood Bank Management System/Views/Shared/Error.cshtml]

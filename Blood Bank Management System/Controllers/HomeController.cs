@@ -23,11 +23,6 @@ namespace Blood_Bank_Management_System.Controllers
 			return View();
 		}
 
-		public IActionResult Registration()
-		{
-			return View();
-		}
-
 		public IActionResult MainPage()
 		{
 			return View();

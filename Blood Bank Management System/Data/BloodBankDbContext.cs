@@ -16,6 +16,5 @@ namespace Blood_Bank_Management_System.Data
         // public DbSet<Request> Requests { get; set; }
         // public DbSet<Donor> Donors { get; set; }
         // public DbSet<BloodBank> BloodBanks { get; set; }
-        // public DbSet<Blood> Bloods { get; set; }
     }
 }

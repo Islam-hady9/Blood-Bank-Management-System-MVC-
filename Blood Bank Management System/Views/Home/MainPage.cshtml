@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Project Interface";
+}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/UserInterface.css">
+</head>
+<body class="header">
+    <h2>~ Welcome To <i class="fa-solid fa-face-smile"></i><br><span>Our Blood Bank <br>Management System <i class="fa-solid fa-heart-pulse"></i></span></h2>
+    <div class="contain">
+        <br>
+        <br>
+        <div class="project-card">
+            <div class="images">
+                <img src="~/css/img/Request.jpg" />
+            </div>
+            <div class="project-info">
+
+                <a asp-controller="Home" asp-action="RequestBlood" class="more-details">RequestBlood/Plasma<br><i class="fa-regular fa-paper-plane"></i></a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="images">
+                <img src="~/css/img/Search.jpg" />
+            </div>
+            <div class="project-info">
+                <a asp-controller="Home" asp-action="SearchBlood" class="more-details">Search Blood/Plasma<br><i class="fa-solid fa-magnifying-glass"></i> </a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="images">
+                <img src="~/css/img/donor.jpg" />
+            </div>
+            <div class="project-info">
+                <a asp-controller="Home" asp-action="Donors" class="more-details">Donors<br><i class="fa-solid fa-hand-holding-droplet"></i></a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="images">
+                <img src="~/css/img/Managment.jpg" />
+            </div>
+            <div class="project-info">
+                <a asp-controller="Home" asp-action="Management" class="more-details">Management<br><i class="fa-solid fa-user-doctor"></i><i class="fa-solid fa-user-nurse"></i></a>
+            </div>
+        </div>
+    </div>
+</body>

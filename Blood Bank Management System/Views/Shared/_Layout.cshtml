@@ -1,16 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"] - Blood_Bank_Management_System</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    @* They are included in their cshtml files and I commented them because in the Home *@
-    @* I need no background-image to do the screen in Home page *@
-    @* <link rel="stylesheet" href="~/css/RequestBlood.css" asp-append-version="true" /> *@
-    @* <link rel="stylesheet" href="~/css/SendRequest.css" asp-append-version="true" /> *@
-    @* <link rel="stylesheet" href="~/css/ViewRequests.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
 </head>
 <body>
     <header>
@@ -24,31 +19,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SignIn">SignIn</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Interface">Interface</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Registration">Registration</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Hospitals">Hospitals</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Donors">Donors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Management">Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SearchBlood">SearchBlood</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="RequestBlood">RequestBlood</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="MainPage">MainPage</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SendRequest">SendRequest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="ViewRequests">ViewRequests</a>
                         </li>
                     </ul>
                 </div>

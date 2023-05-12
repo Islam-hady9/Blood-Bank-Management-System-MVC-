@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Employee Search";
+}
+@model Employee;
+<div class="container">
+    <h1 class="display-4">Result Search</h1>
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Employee Details</h5><hr>
+            @if (Model != null)
+            {
+                <p class="card-text"><strong>ID:</strong> @Model.EmployeeID</p>
+                <p class="card-text"><strong>Name:</strong> @Model.EmployeeName</p>
+                <p class="card-text"><strong>Age:</strong> @Model.EmployeeAge</p>
+                <p class="card-text"><strong>Address:</strong> @Model.EmployeeAddress</p>
+                <p class="card-text"><strong>Email:</strong> @Model.EmployeeEmail</p>
+                <p class="card-text"><strong>Phone:</strong> @Model.EmployeePhone</p>
+                <p class="card-text"><strong>Field:</strong> @Model.Field</p>
+                <p class="card-text"><strong>Image Name:</strong> @Model.ImageName.Substring(Model.ImageName.IndexOf("Img\\") + 4)</p>
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> You should enter a specific existing id.</p>
+            }
+        </div>
+    </div>
+</div>

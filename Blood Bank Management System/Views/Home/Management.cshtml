@@ -2,39 +2,24 @@
     ViewData["Title"] = "Management";
 }
 <head>
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
     <link href="~/css/glyphicon.css" rel="stylesheet">
-    <link href="~/css/pop-up.css" rel="stylesheet">
 </head>
 <body class="body">
-    <dialog id="dialog_1">
-        <h2>select your choice</h2>
-        <!-- Male -->
-        <input id="radio_1" type="radio" name="choice" checked>
-        <label>Add</label>
-        <!-- Female -->
-        <input id="radio_2" type="radio" name="choice">
-        <label>Remove</label>
-        <!-- Default -->
-        <input id="radio_3" type="radio" name="choice">
-        <label>Delete</label><br>
-        <!-- button -->
-        <button id="Done">Done</button>
-    </dialog>
-    <section>
-        <input type="text" placeholder="Search..." name="search">
-        <button><span class="glyphicon glyphicon-search"></span>search</button>
-    </section>
-    <table>
+    <form class="form-inline" method="get" asp-controller="Employee" asp-action="Search2">
+        <div class="input-group">
+            <input type="search" class="form-control mx-3" name="id" placeholder="search by id">
+            <section class="input-group-append">
+                <button type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
+            </section>
+        </div>
+    </form>
+    <table class="table">
         <!-- Demonstrait the caption -->
         <caption>Management</caption>
-        <!-- searching div -->
-        
-        <!-- Demonstrait the head -->
+        <!-- Table header -->
         <thead>
-            <!-- Table raw -->
             <tr>
-                <!-- Table header -->
                 <th>ID</th>
                 <th>Name</th>
                 <th>Age</th>
@@ -42,76 +27,47 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Function</th>
+                <th>Image</th>
+                <th>Image itself</th>
             </tr>
         </thead>
         <!-- Demonstrait the body -->
         <tbody>
-            <!-- Demonstrait the first raw -->
-            <tr>
-                <td>Ahmed</td>
-                <td>Egypt</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
-            <!-- Demonstrait the second raw -->
-            <tr>
-                <td>Mohammed</td>
-                <td>cairo</td>
-                <td>other</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
-            <!-- Demonstrait the third raw -->
-            <tr>
-                <td>Mohammed</td>
-                <td>cairo</td>
-                <td>other</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
-            <!-- Demonstrait the fourth raw -->
-            <tr>
-                <td>Mohammed</td>
-                <td>cairo</td>
-                <td>other</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
-            <!-- Demonstrait the fifth raw -->
-            <tr>
-                <td>Mohammed</td>
-                <td>cairo</td>
-                <td>other</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
+            @{
+                @model IEnumerable<Employee>
+                @if (Model != null)
+                @foreach (var el in Model)
+                {
+                    @if (el != null)
+                    {
+                        <tr>
+                            <td>@el.EmployeeID</td>
+                            <td>@el.EmployeeName</td>
+                            <td>@el.EmployeeAge</td>
+                            <td>@el.EmployeeAddress</td>
+                            <td>@el.EmployeeEmail</td>
+                            <td>@el.EmployeePhone</td>
+                            <td>@el.Field</td>
+                            <td>@el.ImageName.Substring(el.ImageName.IndexOf("Img\\") + 4)</td>
+                            <td><img src="@el.ImageName" width="80px" height="80px"></td>
+                        </tr>
+                    }
+                }
+            }
         </tbody>
-        <!-- Demonstrait the footer -->
-        <tfoot>
-            <tr>
-                <td>Total</td>
-                <td>500</td>
-                <td>450</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-                <td>250</td>
-            </tr>
-        </tfoot>
     </table>
-    <div class="button-div">
-        <button id="change">change</button>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Employee" asp-action="Add">Add</a></button>
+        </div>
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Employee" asp-action="Update">Update</a></button>
+        </div>
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Employee" asp-action="Delete">Delete</a></button>
+        </div>
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Employee" asp-action="Show">Show hiddens</a></button>
+        </div>
     </div>
-    <script src="~/js/pop-up.js"></script>
 </body>

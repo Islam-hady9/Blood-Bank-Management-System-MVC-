@@ -14,13 +14,13 @@ main {
     text-transform: capitalize;
 }
 
-    main .images {
-        height: 540px;
-        background-image: url("img/01.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        animation: animate 20s 1s infinite; /* name-duration-delay-count */
-    }
+main .images {
+    height: 540px;
+    background-image: url("img/01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: animate 20s 1s infinite; /* name-duration-delay-count */
+}
 
 @keyframes animate {
     10% {
@@ -39,6 +39,12 @@ main {
         background-image: url("img/05.jpg");
     }
 }
+
+main .project-info {
+    display: flex;
+    justify-content: space-around;
+}
+
 main button {
     margin-top: 3%;
 }
@@ -48,6 +54,6 @@ button a {
     color: white;
 }
 
-    button a:hover {
-        color: black;
-    }
+button a:hover {
+    color: black;
+}

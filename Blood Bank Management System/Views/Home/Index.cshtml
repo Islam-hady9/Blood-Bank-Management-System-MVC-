@@ -1,25 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-<link href="~/css/Index.css" rel="stylesheet" id="bootstrap-css">
-@* <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> *@
-@* <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> *@
-<!------ Include the above in your HEAD tag ---------->
+    <link href="~/css/index.css" rel="stylesheet" id="bootstrap-css">
 </head>
 <body>
-<main>
-    <div class="images">
-        <!-- empty and we will make a background-image from css file -->
-    </div>
-    <div class="project-info">
-        <button class="btn btn-lg btn-danger btn-block btn-signin"> 
-            <a asp-controller="Home" asp-action="RedirectToInterface" class="more-details">Get Started<br> <i class="fa-solid fa-magnifying-glass"></i></a>
-        </button>
-    </div>
-</main>
+    <main>
+        <div class="images">
+            <!-- empty and we will make a background-image from css file -->
+        </div>
+        <div class="project-info">
+            <button class="btn btn-lg btn-danger btn-block btn-signin"> 
+                <a asp-controller="Home" asp-action="SignIn" class="more-details">SignIn</a>
+            </button>
+            <button class="btn btn-lg btn-danger btn-block btn-signin"> 
+                <a asp-controller="Home" asp-action="Registration" class="more-details">Registration</a>
+            </button>
+        </div>
+    </main>
 </body>
-</html>

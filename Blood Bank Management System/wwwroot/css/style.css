@@ -9,9 +9,9 @@ table, table td, table th {
     border: 2px solid #e5b2b2;
 }
 table {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 1.4em;
+    width: 100%;
+    margin: 0 auto 1%;
+    font-size: 1.2em;
     cursor: pointer;
     border-spacing: 0px;
     font-family: Arial, Helvetica, sans-serif;
@@ -26,15 +26,15 @@ table caption {
 }
 table thead {
     color: #EEE;
-    background-color: #ffb8b8;
+    background-color: #ffb8b8 !important;
 }
 table td {
     padding: 1%;
-    background-color: #f4c5c5;
+    background-color: #f4c5c5 !important;
 }
 table tbody tr:hover td, table tfoot tr:hover td {
     color: white;
-    background-color: #ffd3d3;
+    background-color: #ffd3d3 !important;
 }
 /* button */
 .button-div {
@@ -60,14 +60,17 @@ button {
 .button-div button:active {
     background-color: #fe9696;
 }
+.button-div button a {
+    text-decoration: none;
+}
 /* section-button */
-section button, dialog button {
+section button {
     color: #dc3545;
     font-size: 25px;
     padding: 3px 15px;
     border: 2px solid #dc3545;
 }
-section button:hover, dialog button:hover {
+section button:hover {
     color: white;
     cursor: pointer;
     background-color: #dc3545;

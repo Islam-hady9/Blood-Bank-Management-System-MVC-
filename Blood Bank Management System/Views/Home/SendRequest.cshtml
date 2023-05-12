@@ -2,8 +2,68 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    ViewData["Title"] = "SendRequest";
 }
-<head>
+<h1 class="d-flex justify-content-center align-items-center">Page For Send Request</h1>
+<form asp-controller="Home" asp-action="ViewRequests" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group my-4">
+        <label for="HospitalName">Hospital Name</label>
+        <input type="text" class="form-control" id="HospitalName" name="HospitalName" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalId">Hospital ID</label>
+        <input type="text" class="form-control" id="HospitalId" name="HospitalId" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalEmail">Hospital Email</label>
+        <input type="email" class="form-control" id="HospitalEmail" name="HospitalEmail" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalLocation">Hospital Location</label>
+        <input type="text" class="form-control" id="HospitalLocation" name="HospitalLocation" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalPhone">Hospital Phone</label>
+        <input type="text" class="form-control" id="HospitalPhone" name="HospitalPhone" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="ReceivedUnits">Quantity</label>
+        <input type="number" min="1" class="form-control" id="ReceivedUnits" name="ReceivedUnits" required>
+    </div>
+
+    <div class="form-group my-4">
+        <label for="DateOfAcception">Date Of Acception</label>
+        <input type="date" class="form-control" id="DateOfAcception" name="DateOfAcception">
+    </div>
+
+    @* enum *@
+    <div class="my-4">
+        <label for="Field">Blood Type</label>
+        <select class="form-control form-select" id="Field" name="Field" required>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-4">
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>@* value="Create" *@
+    </div>
+</form>
+
+@* <head>
     <link rel="stylesheet" href="~/css/SendRequest.css" type="text/css" />
 </head>
 <body>
@@ -50,4 +110,4 @@
     <div id="bttn">
         <button type="submit">Send</button>
     </div>
-</body>
+</body> *@

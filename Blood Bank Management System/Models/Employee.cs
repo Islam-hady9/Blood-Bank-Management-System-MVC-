@@ -1,142 +1,56 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Blood_Bank_Management_System.Models
 {
     public enum EmployeeType { Manager, Technician }
     public class Employee
     {
-        private string employeeName;
-        private string employeeID;
-        private string employeePhone;
-        private string employeeAddress;
-        private string employeeEmail;
-        private int employeeAge;
-        private EmployeeType field;
+        [Key]
+        [StringLength(14)]
+        [Required(ErrorMessage = "Employee ID is required.")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "Employee ID should contain only digits.")]
+        public string EmployeeID { get; set; }
 
-        // Default Constructor.
+        [Required(ErrorMessage = "Employee Name is required.")]
+        public string EmployeeName { get; set; }
+
+        [Required(ErrorMessage = "Employee Age is required.")]
+        [Range(25, 60, ErrorMessage = "Employee Age should be between 25 and 60.")]
+        public int EmployeeAge { get; set; }
+
+        [Required(ErrorMessage = "Employee Address is required.")]
+        public string EmployeeAddress { get; set; }
+
+        [Required(ErrorMessage = "Employee Email is required.")]
+        public string EmployeeEmail { get; set; }
+
+        [StringLength(11)]
+        [Required(ErrorMessage = "Employee Phone is required.")]
+        [RegularExpression(@"^01[0125]\d{8}$", ErrorMessage = "Employee Phone should start with '01' and have a length of 11.")]
+        public string EmployeePhone { get; set; }
+
+        [Required(ErrorMessage = "Employee Type is required.")]
+        public EmployeeType Field { get; set; }
+
+        [DefaultValue("default.png")]
+        [Required(ErrorMessage = "Image Name is required.")]
+        public string ImageName { get; set; }
+
+        // To establish relationships between Employee and Request entities.
+        // public ICollection<Request> Enrollments { get; set; }    // As ArrayList.
+
+        // Default Constructor
         public Employee()
         {
-            this.employeeName = string.Empty;
-            this.employeeID = string.Empty;
-            this.employeePhone = string.Empty;
-            this.employeeAddress = string.Empty;
-            this.employeeEmail = string.Empty;
-            this.employeeAge = 25;
-            this.field = EmployeeType.Manager;
-        }
-
-        // Argument Constructor.
-        public Employee(string employeeName, string employeeID, string employeePhone, string employeeAddress, string employeeEmail, int employeeAge, EmployeeType field)
-        {
-            this.employeeName = employeeName;
-            if (employeeID.Length == 14 && Regex.IsMatch(employeeID, "^[0-9]+$"))
-            {
-                this.employeeID = employeeID;
-            }
-            else
-            {
-                throw new ArgumentException("Employee ID must be 14 characters long");
-            }
-            if (employeePhone.Length == 11 && Regex.IsMatch(employeePhone, "^[0-9]+$") && employeePhone[0] == '0')
-            {
-                this.employeePhone = employeePhone;
-            }
-            else
-            {
-                throw new ArgumentException("Employee Phone must be 11 characters long");
-            }
-            this.employeeAddress = employeeAddress;
-            this.employeeEmail = employeeEmail;
-            if (employeeAge >= 25 && employeeAge < 60)
-            {
-                this.employeeAge = employeeAge;
-            }
-            else
-            {
-                throw new ArgumentException("Employee Age must be between 25 and 60");
-            }
-            this.field = field;
-        }
-
-        //Setters.
-        public void SetEmployeeID(string employeeID)
-        {
-            if (employeeID.Length == 14 && Regex.IsMatch(employeeID, "^[0-9]+$"))
-            {
-                this.employeeID = employeeID;
-            }
-            else
-            {
-                throw new ArgumentException("Employee ID must be 14 characters long");
-            }
-        }
-        public void SetEmployeeName(string employeeName)
-        {
-            this.employeeName = employeeName;
-        }
-        public void SetEmployeePhone(string employeePhone)
-        {
-            if (employeePhone.Length == 11 && Regex.IsMatch(employeePhone, "^[0-9]+$") && employeePhone[0] == '0')
-            {
-                this.employeePhone = employeePhone;
-            }
-            else
-            {
-                throw new ArgumentException("Employee Phone must be 11 characters long");
-            }
-        }
-        public void SetEmployeeAddress(string employeeAddress)
-        {
-            this.employeeAddress = employeeAddress;
-        }
-        public void SetEmployeeEmail(string employeeEmail)
-        {
-            this.employeeEmail = employeeEmail;
-        }
-        public void SetEmployeeAge(int employeeAge)
-        {
-            if (employeeAge >= 25 && employeeAge < 60)
-            {
-                this.employeeAge = employeeAge;
-            }
-            else
-            {
-                throw new ArgumentException("Employee Age must be between 25 and 60");
-            }
-        }
-        public void SetEmployeeType(EmployeeType field)
-        {
-            this.field = field;
-        }
-
-        // Getters.
-        public string GetEmployeeID()
-        {
-            return employeeID;
-        }
-        public string GetEmployeeName()
-        {
-            return employeeName;
-        }
-        public string GetEmployeePhone()
-        {
-            return employeePhone;
-        }
-        public string GetEmployeeAddress()
-        {
-            return employeeAddress;
-        }
-        public string GetEmployeeEmail()
-        {
-            return employeeEmail;
-        }
-        public int GetEmployeeAge()
-        {
-            return employeeAge;
-        }
-        public EmployeeType GetEmployeeType()
-        {
-            return field;
+            this.EmployeeName = string.Empty;
+            this.EmployeeID = string.Empty;
+            this.EmployeePhone = string.Empty;
+            this.EmployeeAddress = string.Empty;
+            this.EmployeeEmail = string.Empty;
+            this.EmployeeAge = 25;
+            this.Field = EmployeeType.Manager;
+            this.ImageName = string.Empty;
         }
     }
 }

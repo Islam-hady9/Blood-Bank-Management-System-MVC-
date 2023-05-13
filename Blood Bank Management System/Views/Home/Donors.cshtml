@@ -1,101 +1,71 @@
 @{
-    ViewData["Title"] = "Doctor";
+    ViewData["Title"] = "Donor";
 }
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link href="~/css/glyphicon.css" rel="stylesheet">
 </head>
 <body class="body">
-    <section>
-        <input type="text" placeholder="Search..." name="search">
-        <button><span class="glyphicon glyphicon-search"></span>search</button>
-    </section>
-    <table>
+    <form class="form-inline" method="get" asp-controller="Donor" asp-action="Search">
+        <div class="input-group">
+            <input type="search" class="form-control mx-3" name="id" placeholder="search by id">
+            <section class="input-group-append">
+                <button type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
+            </section>
+        </div>
+    </form>
+    <table class="table">
         <!-- Demonstrait the caption -->
-        <caption>Donors</caption>
-        <!-- Demonstrait the head -->
+        <caption>Donor</caption>
+        <!-- Table header -->
         <thead>
-            <!-- Table raw -->
             <tr>
-                <!-- Table header -->
                 <th>ID</th>
                 <th>Name</th>
                 <th>Age</th>
+                <th>Address</th>
                 <th>Phone</th>
                 <th>Gender</th>
-                <th>Address</th>
                 <th>Blood Type</th>
                 <th>Last Donation Date</th>
             </tr>
         </thead>
         <!-- Demonstrait the body -->
         <tbody>
-            <!-- Demonstrait the first raw -->
-            <tr>
-                <td>123</td>
-                <td>Ahmed</td>
-                <td>25</td>
-                <td>012013</td>
-                <td>male</td>
-                <td>assiut</td>
-                <td>O+</td>
-                <td>1/12/2022</td>
-            </tr>
-            <!-- Demonstrait the second raw -->
-            <tr>
-                <td>133</td>
-                <td>mohamed</td>
-                <td>21</td>
-                <td>011013</td>
-                <td>male</td>
-                <td>assiut</td>
-                <td>A+</td>
-                <td>1/1/2022</td>
-            </tr>
-            <!-- Demonstrait the third raw -->
-            <tr>
-                <td>223</td>
-                <td>ramez</td>
-                <td>24</td>
-                <td>013023</td>
-                <td>male</td>
-                <td>assiut</td>
-                <td>D+</td>
-                <td>5/2/2022</td>
-            </tr>
-            <!-- Demonstrait the fourth raw -->
-            <tr>
-                <td>323</td>
-                <td>islam</td>
-                <td>22</td>
-                <td>022413</td>
-                <td>male</td>
-                <td>assiut</td>
-                <td>O</td>
-                <td>14/12/2021</td>
-            </tr>
-            <!-- Demonstrait the fifth raw -->
-            <tr>
-                <td>224</td>
-                <td>Ahmed</td>
-                <td>26</td>
-                <td>034013</td>
-                <td>male</td>
-                <td>assiut</td>
-                <td>D</td>
-                <td>19/2/2021</td>
-            </tr>
+            @{
+                @model IEnumerable<Donor>
+                @if (Model != null)
+                    @foreach (var dr in Model)
+                    {
+                        @if (dr != null)
+                        {
+                            <tr>
+                                <td>@dr.DonorID</td>
+                                <td>@dr.DonorName</td>
+                                <td>@dr.DonorAge</td>
+                                <td>@dr.DonorAddress</td>
+                                <td>@dr.DonorPhone</td>
+                                <td>@dr.DonorGender</td>
+                                <td>@dr.DonorBloodType</td>
+                                <td>@dr.LastDonationDate</td>
+                            </tr>
+                        }
+                    }
+            }
         </tbody>
     </table>
     <div class="d-flex justify-content-center align-items-center">
         <div class="button-div px-4">
-            <button>Add</button>
+            <button><a class="text-white" asp-controller="Donor" asp-action="AddDonor">Add</a></button>
         </div>
         <div class="button-div px-4">
-            <button>Update</button>
+            <button><a class="text-white" asp-controller="Donor" asp-action="UpdateDonor">Update</a></button>
         </div>
         <div class="button-div px-4">
-            <button>Remove</button>
+            <button><a class="text-white" asp-controller="Donor" asp-action="DeleteDonor">Delete</a></button>
+        </div>
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Donor" asp-action="Show">Show hiddens</a></button>
         </div>
     </div>
 </body>

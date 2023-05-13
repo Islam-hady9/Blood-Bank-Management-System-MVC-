@@ -22,6 +22,42 @@ namespace Blood_Bank_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Donor", b =>
+                {
+                    b.Property<string>("DonorID")
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
+
+                    b.Property<string>("DonorAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DonorAge")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DonorBloodType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DonorGender")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DonorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DonorPhone")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<DateTime>("LastDonationDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("DonorID");
+
+                    b.ToTable("Donors");
+                });
+
             modelBuilder.Entity("Blood_Bank_Management_System.Models.Employee", b =>
                 {
                     b.Property<string>("EmployeeID")
@@ -62,15 +98,18 @@ namespace Blood_Bank_Management_System.Migrations
 
             modelBuilder.Entity("Blood_Bank_Management_System.Models.Hospital", b =>
                 {
+                    b.Property<int>("HospitalId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HospitalId"), 1L, 1);
+
                     b.Property<DateTime>("DateOfAcception")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("HospitalEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("HospitalId")
-                        .HasColumnType("int");
 
                     b.Property<string>("HospitalLocation")
                         .IsRequired()
@@ -86,6 +125,8 @@ namespace Blood_Bank_Management_System.Migrations
 
                     b.Property<int>("ReceivedUnits")
                         .HasColumnType("int");
+
+                    b.HasKey("HospitalId");
 
                     b.ToTable("Hospitals");
                 });

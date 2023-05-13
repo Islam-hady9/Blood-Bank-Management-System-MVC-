@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
+<form asp-controller="Donor" asp-action="RemoveIdvb" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="my-4">
+        <label>Id for deleting</label>
+        <input type="text" class="form-control" name="id" required>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-4">
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
+    </div>
+</form>

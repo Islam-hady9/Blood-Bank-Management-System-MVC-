@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Donor Search";
+}
+@model Donor;
+<div class="container">
+    <h1 class="display-4">Result Search</h1>
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Donor Details</h5><hr>
+            @if (Model != null)
+            {
+                <p class="card-text"><strong>ID:</strong> @Model.DonorID</p>
+                <p class="card-text"><strong>Name:</strong> @Model.DonorName</p>
+                <p class="card-text"><strong>Age:</strong> @Model.DonorAge</p>
+                <p class="card-text"><strong>Address:</strong> @Model.DonorAddress</p>
+                <p class="card-text"><strong>Phone:</strong> @Model.DonorPhone</p>
+                <p class="card-text"><strong>Gender:</strong> @Model.DonorGender</p>
+                <p class="card-text"><strong>BloodType:</strong> @Model.DonorBloodType</p>
+                <p class="card-text"><strong>Last Donation Date:</strong> @Model.LastDonationDate</p>
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> You should enter a specific existing id.</p>
+            }
+        </div>
+    </div>
+</div>

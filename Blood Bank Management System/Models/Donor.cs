@@ -21,14 +21,27 @@ namespace Blood_Bank_Management_System.Models
     public class Donor
     {
         // Data Members...
+        [Required(ErrorMessage = "Donor Name is required.")]
         public string DonorName { get; set; }
         [Key]
+        [StringLength(14)]
+        [Required(ErrorMessage = "Donor ID is required.")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "Donor ID should contain only digits.")]
         public string DonorID { get; set; }
+        [StringLength(11)]
+        [Required(ErrorMessage = "Donor Phone is required.")]
+        [RegularExpression(@"^01[0125]\d{8}$", ErrorMessage = "Donor Phone should start with '01' and have a length of 11.")]
         public string DonorPhone { get; set; }
+        [Required(ErrorMessage = "Donor Address is required.")]
         public string DonorAddress { get; set; }
+        [Required(ErrorMessage = "Donor Age is required.")]
+        [Range(18, 60, ErrorMessage = "Donor Age should be between 18 and 60.")]
         public int DonorAge { get; set; }
+        [Required(ErrorMessage = "Donor Gender is required.")]
         public Gender DonorGender { get; set; }
+        [Required(ErrorMessage = "Donor Blood Type is required.")]
         public BloodType DonorBloodType { get; set; }
+        [Required(ErrorMessage = "Donor Last Donation Date is required.")]
         public DateTime LastDonationDate { get; set; }
 
         // Default Constructor...
@@ -43,128 +56,5 @@ namespace Blood_Bank_Management_System.Models
             this.DonorBloodType = BloodType.A;
             this.LastDonationDate = DateTime.Now;
         }
-
-        // Argument Constructor...
-        //public Donor(string donorName, string donorID, string donorPhone, string donorAddress, int donorAge, Gender donorGender, BloodType donorBloodType, DateTime lastDonationDate)
-        //{
-        //    this.donorName = donorName;
-        //    if (donorID.Length == 14 && Regex.IsMatch(donorID, "^[0-9]+$"))
-        //    {
-        //        this.donorID = donorID;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor ID must be 14 characters long");
-        //    }
-        //    if (donorPhone.Length == 11 && Regex.IsMatch(donorPhone, "^[0-9]+$") && donorPhone[0] == '0')
-        //    {
-        //        this.donorPhone = donorPhone;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor Phone must be 11 characters long");
-        //    }
-        //    this.donorAddress = donorAddress;
-        //    if (donorAge >= 18 && donorAge < 60)
-        //    {
-        //        this.donorAge = donorAge;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor Age must be between 18 and 60");
-        //    }
-        //    this.donorGender = donorGender;
-        //    this.donorBloodType = donorBloodType;
-        //    this.lastDonationDate = lastDonationDate;
-        //}
-
-        ////Setters...
-        //public void SetDonorName(string donorName)
-        //{
-        //    this.donorName = donorName;
-        //}
-        //public void SetDonorID(string donorID)
-        //{
-        //    if (donorID.Length == 14 && Regex.IsMatch(donorID, "^[0-9]+$"))
-        //    {
-        //        this.donorID = donorID;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor ID must be 14 characters long");
-        //    }
-        //}
-        //public void SetDonorPhone(string donorPhone)
-        //{
-        //    if (donorPhone.Length == 11 && Regex.IsMatch(donorPhone, "^[0-9]+$") && donorPhone[0] == '0')
-        //    {
-        //        this.donorPhone = donorPhone;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor Phone must be 11 characters long");
-        //    }
-        //}
-        //public void SetDonorAddress(string donorAddress)
-        //{
-        //    this.donorAddress = donorAddress;
-        //}
-        //public void SetDonorAge(int donorAge)
-        //{
-        //    if (donorAge >= 18 && donorAge < 60)
-        //    {
-        //        this.donorAge = donorAge;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Donor Age must be between 18 and 60");
-        //    }
-        //}
-        //public void SetDonorGender(Gender donorGender)
-        //{
-        //    this.donorGender = donorGender;
-        //}
-        //public void SetDonorBloodType(BloodType donorBloodType)
-        //{
-        //    this.donorBloodType = donorBloodType;
-        //}
-        //public void SetLastDonationDate(DateTime lastDonationDate)
-        //{
-        //    this.lastDonationDate = lastDonationDate;
-        //}
-
-        ////Getter...
-        //public string GetDonorName()
-        //{
-        //    return this.donorName;
-        //}
-        //public string GetDonorID()
-        //{
-        //    return this.donorID;
-        //}
-        //public string GetDonorPhone()
-        //{
-        //    return this.donorPhone;
-        //}
-        //public string GetDonorAddress()
-        //{
-        //    return this.donorAddress;
-        //}
-        //public int GetDonorAge()
-        //{
-        //    return this.donorAge;
-        //}
-        //public Gender GetDonorGender()
-        //{
-        //    return this.donorGender;
-        //}
-        //public BloodType GetDonorBloodType()
-        //{
-        //    return this.donorBloodType;
-        //}
-        //public DateTime GetLastDonationDate()
-        //{
-        //    return this.lastDonationDate;
-        //}
     }
 }

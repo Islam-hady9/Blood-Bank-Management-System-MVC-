@@ -22,6 +22,7 @@ namespace Blood_Bank_Management_System.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+<<<<<<< HEAD
             modelBuilder.Entity("Blood_Bank_Management_System.Models.BloodBank", b =>
                 {
                     b.Property<int>("BloodBankId")
@@ -43,6 +44,42 @@ namespace Blood_Bank_Management_System.Migrations
                     b.HasKey("BloodBankId");
 
                     b.ToTable("BloodBanks");
+=======
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Donor", b =>
+                {
+                    b.Property<string>("DonorID")
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
+
+                    b.Property<string>("DonorAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DonorAge")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DonorBloodType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DonorGender")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DonorName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DonorPhone")
+                        .IsRequired()
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
+
+                    b.Property<DateTime>("LastDonationDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("DonorID");
+
+                    b.ToTable("Donors");
+>>>>>>> 281406d162702d2949f6cc750904d7bbfb7de730
                 });
 
             modelBuilder.Entity("Blood_Bank_Management_System.Models.Employee", b =>

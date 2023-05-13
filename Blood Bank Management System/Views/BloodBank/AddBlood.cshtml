@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Add Blood";
+}
+<h1 class="d-flex justify-content-center align-items-center">Form For Blood Data</h1>
+<form asp-controller="BloodBank" asp-action="Add" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="my-4">
+        <label for="BloodBankId">Blood Bank ID</label>
+        <input type="text" class="form-control" id="BloodBankId" name="BloodBankId" required>
+    </div>
+
+
+    <div class="my-4">
+        <label for="BloodBankEmail">Blood Bank Email</label>
+        <input type="text" class="form-control" id="BloodBankEmail" name="BloodBankEmail" required>
+    </div>
+
+
+    @* enum *@
+    <div class="my-4">
+        <label for="BloodGroups">Blood Groups</label>
+        <select class="form-control form-select" id="BloodGroups" name="BloodGroups" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="AB+">AB+</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="B-">B-</option>
+            <option value="AB-">AB-</option>
+            <option value="O-">O-</option>
+        </select>
+    </div>
+
+
+    <div class="my-4">
+        <label for="BloodQuantity">Blood Quantity</label>
+        <input type="text" class="form-control" id="BloodQuantity" name="BloodQuantity" required>
+    </div>
+
+
+    @* enum *@
+    <div class="my-4">
+        <label for="StatusOfBlood">Status Of Blood</label>
+        <select class="form-control form-select" id="StatusOfBlood" name="StatusOfBlood" required>
+            <option value="Fresh">Fresh</option>
+            <option value="NotFresh">Not Fresh</option>
+        </select>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-4">
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>@* value="Create" *@
+    </div>
+</form>

@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Delete Blood Data";
+}
+<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
+<form asp-controller="BloodBank" asp-action="RemoveId" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="my-4">
+        <label>Id for deleting</label>
+        <input type="text" class="form-control" name="id" required>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-4">
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
+    </div>
+</form>
+@model BloodBank;
+<div class="container">
+    <h1 class="display-4">Delete Result</h1>
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Blood Details that deleted</h5><hr>
+            @if (Model != null)
+            {
+                <p class="card-text"><strong>Blood ID:</strong> @Model.BloodBankId</p>
+                <p class="card-text"><strong>Blood Bank Email:</strong> @Model.BloodBankEmail</p>
+                <p class="card-text"><strong>Blood Group :</strong> @Model.BloodGroup</p>
+                <p class="card-text"><strong>Blood Quantity :</strong> @Model.BloodBankQuantity</p>
+                <p class="card-text"><strong>Status Of Blood:</strong> @Model.StatusOfBlood</p>
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> No delete until now.</p>
+            }
+        </div>
+    </div>
+</div>

@@ -70,7 +70,7 @@ namespace Blood_Bank_Management_System.Controllers
 			catch (Exception ex)
 			{
 				ViewBag.exc = ex.Message;
-				return View("/Views/Employee/Employee.cshtml");
+				return View("/Views/Employee/Add.cshtml");
 			}
 		}
 		public IActionResult Show()

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blood_Bank_Management_System.Models
 {
@@ -8,94 +10,32 @@ namespace Blood_Bank_Management_System.Models
     }
     public class BloodBank
     {
-        // Blood Bank Data
+        // Blood Bank Data & Data Annotation...
         [Key]
+        [Required(ErrorMessage = "Blood Bank ID is required.")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "BloodBank ID should contain only digits.")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BloodBankId { get; set; }
-        public float BloodBankQuantity { get; set; }
+        [Required(ErrorMessage = "Blood Bank Email is required.")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Blood Bank Email is invalid")]
+        public string BloodBankEmail { get; set; }
+        [Required(ErrorMessage = "Blood Bank Group is required.")]
         public BloodType BloodGroup { get; set; }
+        [Required(ErrorMessage = "Blood Bank Quantity is required.")]
+        public float BloodBankQuantity { get; set; }
+        [Required(ErrorMessage = "Blood Bank Status is required.")]
         public BloodStatus StatusOfBlood { get; set; }
+        
+
 
         // The Defult Constractor
         public BloodBank()
         {
             this.BloodBankId = 1;
-            this.BloodBankQuantity = 0.0f;
+            this.BloodBankEmail = string.Empty;
             this.BloodGroup = BloodType.A;
+            this.BloodBankQuantity = 0.0f;
             this.StatusOfBlood = BloodStatus.Fresh;
         }
-
-        // The Argument Constractor //
-        //public BloodBank(int bloodBankId, float bloodBankQuantity, BloodType bloodGroup, BloodStatus statusOfBlood)
-        //{
-        //    if (bloodBankId <= 0)
-        //    {
-        //        throw new ArgumentException("Blood Bank Id must be greater than 0");
-        //    }
-        //    else
-        //    {
-        //        this.bloodBankId = bloodBankId;
-        //    }
-        //    if (bloodBankQuantity >= 0)
-        //    {
-        //        this.bloodBankQuantity = bloodBankQuantity;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Blood Bank Quantity must be greater than or equal to zero.");
-        //    }
-        //    this.bloodGroup = bloodGroup;
-        //    this.statusOfBlood = statusOfBlood;
-        //}
-
-        //// Setters //
-        //public void SetBloodBankId(int bloodBankId)
-        //{
-        //    if (bloodBankId <= 0)
-        //    {
-        //        throw new ArgumentException("Blood Bank Id must be greater than 0");
-        //    }
-        //    else
-        //    {
-        //        this.bloodBankId = bloodBankId;
-        //    }
-        //}
-        //public void SetBloodBankQuantity(float bloodBankQuantity)
-        //{
-        //    if (bloodBankQuantity >= 0)
-        //    {
-        //        this.bloodBankQuantity = bloodBankQuantity;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Blood Bank Quantity must be greater than or equal to zero.");
-        //    }
-        //}
-        //public void SetBloodGroups(BloodType bloodGroup)
-        //{
-        //    this.bloodGroup = bloodGroup;
-        //}
-        //public void SetBloodStatus(BloodStatus statusOfBlood)
-        //{
-        //    this.statusOfBlood = statusOfBlood;
-        //}
-
-        //// Getter //
-
-        //public int GetBloodBankId()
-        //{
-        //    return this.bloodBankId;
-        //}
-        //public float GetBloodBankQuantity()
-        //{
-        //    return this.bloodBankQuantity;
-        //}
-        //public BloodType GetBloodGroups()
-        //{
-        //    return this.bloodGroup;
-        //}
-        //public BloodStatus GetBloodStatus()
-        //{
-        //    return this.statusOfBlood;
-        //}
     }
 }

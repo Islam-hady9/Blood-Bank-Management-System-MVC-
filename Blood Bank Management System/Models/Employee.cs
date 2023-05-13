@@ -23,6 +23,7 @@ namespace Blood_Bank_Management_System.Models
         public string EmployeeAddress { get; set; }
 
         [Required(ErrorMessage = "Employee Email is required.")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Employee Email is invalid")]
         public string EmployeeEmail { get; set; }
 
         [StringLength(11)]

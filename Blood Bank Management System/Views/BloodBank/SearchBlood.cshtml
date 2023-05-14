@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Blood Search";
+}
+@model BloodBank;
+<div class="container">
+    <h1 class="display-4">Result Search</h1>
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Blood Details</h5><hr>
+            @if (Model != null)
+            {
+                    <p class="card-text"><strong>Blood ID:</strong> @Model.BloodBankId</p>
+                    <p class="card-text"><strong>Blood Bank Email:</strong> @Model.BloodBankEmail</p>
+                    <p class="card-text"><strong>Blood Group :</strong> @Model.BloodGroup</p>
+                    <p class="card-text"><strong>Blood Quantity :</strong> @Model.BloodBankQuantity</p>
+                    <p class="card-text"><strong>Status Of Blood:</strong> @Model.StatusOfBlood</p>
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> You should enter a specific existing id.</p>
+            }
+        </div>
+    </div>
+</div>

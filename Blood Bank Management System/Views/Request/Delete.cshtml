@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
+<form asp-controller="Request" asp-action="RemoveId" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <div class="my-4">
+        <label>Id for deleting</label>
+        <input type="text" class="form-control" name="id" required>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center my-4">
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
+    </div>
+</form>
+@model Request
+<div class="container">
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            @if (Model != null)
+            {
+                <p class="card-text"><strong>ID:</strong> @Model.RequestID</p>
+                <p class="card-text"><strong>Status:</strong> @Model.RequestStatus</p>
+                <p class="card-text"><strong>To:</strong> @Model.HospitalToRequestFrom</p>
+                <p class="card-text"><strong>Blood Type:</strong> @Model.RequestBloodType</p>
+                <p class="card-text"><strong>Blood Quantity:</strong> @Model.RequestBloodQuantity</p>
+                <p class="card-text"><strong>Request Date</strong> @Model.RequestDate</p>
+
+
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> No delete until now.</p>
+            }
+        </div>
+    </div>
+</div>

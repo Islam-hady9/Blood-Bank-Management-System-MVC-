@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+@model Request;
+<div class="container">
+    <h1 class="display-4">Result Search</h1>
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Request Details</h5><hr>
+            @if (Model != null)
+            {
+                <p class="card-text"><strong>ID:</strong> @Model.RequestID</p>
+                <p class="card-text"><strong>To:</strong> @Model.HospitalToRequestFrom</p>
+                <p class="card-text"><strong>Status:</strong> @Model.RequestStatus</p>
+                <p class="card-text"><strong>Blood Quantity:</strong> @Model.RequestBloodQuantity</p>
+                <p class="card-text"><strong>Request Date:</strong> @Model.RequestDate</p>
+                <p class="card-text"><strong>Blood Type:</strong> @Model.RequestBloodType</p>
+            }
+            else
+            {
+                <p class="card-text"><strong>Error:</strong> You should enter a specific existing id.</p>
+            }
+        </div>
+    </div>
+</div>

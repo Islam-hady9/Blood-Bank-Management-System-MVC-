@@ -10,84 +10,65 @@
     <link rel="stylesheet" href="~/css/ViewRequests.css" asp-append-version="true" />
 </head>
 <body class="body">
-    <section>
-        <input type="text" placeholder="Search..." name="search">
-        <button><span class="glyphicon glyphicon-search"></span>search</button>
-    </section>
+    <form class="form-inline" method="get" asp-controller="Request" asp-action="SearchRequest">
+        <div class="input-group">
+            <input type="search" class="form-control mx-3" name="id" placeholder="search by id">
+            <section class="input-group-append">
+                <button type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
+            </section>
+        </div>
+    </form>
     <table>
         <caption>Requests</caption>
-        <thead>   
+        <thead>
             <tr>
-                <th>Number</th>
+                <th>ID</th>
                 <th>Hospital Name</th>
                 <th>E-mail</th>
-                <th>Address</th>
+                <th>Hospital Location</th>
+                <th>Hospital Phone</th>
                 <th>Blood Type</th>
                 <th>Quantity</th>
                 <th>Request Status</th>
+                <th>Request Date</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Almabara</td>
-                <td>almabara@gmail.com</td>
-                <td>Assiut</td>
-                <td>A+</td>
-                <td>500</td>
-                <td>Accepted</td>
-            </tr>
-      
-            <tr>
-                <td>2</td>
-                <td>Alhelal</td>
-                <td>alhelal@gmail.com</td>
-                <td>Assiut</td>
-                <td>O+</td>
-                <td>200</td>
-                <td>Not enough</td>
-            </tr>
-           
-            <tr>
-                <td>3</td>
-                <td>Alhayat</td>
-                <td>alhayat@gmail.com</td>
-                <td>Assiut</td>
-                <td>B+</td>
-                <td>600</td>
-                <td>Rejected</td>
-            </tr>
-
-            <tr>
-                <td>4</td>
-                <td>Dar Al Shifa</td>
-                <td>daralshifa@gmail.com</td>
-                <td>Assiut</td>
-                <td>A-</td>
-                <td>100</td>
-                <td>Accepted</td>
-            </tr>
-            
-            <tr>
-                <td>5</td>
-                <td>Oteify</td>
-                <td>otify@gmail.com</td>
-                <td>Assiut</td>
-                <td>AB</td>
-                <td>800</td>
-                <td>Accepted</td>
-            </tr>
+            @{
+                @model IEnumerable<Request>
+                @if (Model != null)
+                    @foreach (var reqs in Model)
+                    {
+                        @if (reqs != null)
+                        {
+                            <tr>
+                                <td>@reqs.RequestID</td>
+                                <td>@reqs.HospitalToRequestFrom.HospitalName</td>
+                                <td>@reqs.HospitalToRequestFrom.HospitalEmail</td>
+                                <td>@reqs.HospitalToRequestFrom.HospitalLocation</td>
+                                <td>@reqs.HospitalToRequestFrom.HospitalPhone</td>
+                                <td>@reqs.RequestBloodType</td>
+                                <td>@reqs.RequestBloodQuantity</td>
+                                <td>@reqs.RequestStatus</td>
+                                <td>@reqs.RequestDate</td>
+                            </tr>
+                        }
+                    }
+            }
         </tbody>
     </table>
     <div class="d-flex justify-content-center align-items-center">
         <div class="button-div px-4">
-            <button>Add</button>
+            <button><a class="text-white" asp-controller="Request" asp-action="Add">Add</a></button>
         </div>
         <div class="button-div px-4">
-            <button>Update</button>
+            <button><a class="text-white" asp-controller="Request" asp-action="Update">Update</a></button>
         </div>
         <div class="button-div px-4">
-            <button>Remove</button>
+            <button><a class="text-white" asp-controller="Request" asp-action="Delete">Delete</a></button>
+        </div>
+        <div class="button-div px-4">
+            <button><a class="text-white" asp-controller="Request" asp-action="Show">Show hiddens</a></button>
         </div>
     </div>
 </body>

@@ -2,15 +2,30 @@
     ViewData["Title"] = "Update";
 }
 <h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
-<form asp-controller="Donor" asp-action="RemoveIdvb" method="post" enctype="multipart/form-data">
+<form asp-controller="Donor" asp-action="Search" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
-
+    @Model Donor;
     <div class="my-4">
         <label>Id for deleting</label>
         <input type="text" class="form-control" name="id" required>
     </div>
-
+    
     <div class="d-flex justify-content-center align-items-center my-4">
         <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
     </div>
+    @if (Model != null)
+    {
+        <p class="card-text"><strong>ID:</strong> @Model.DonorID</p>
+        <p class="card-text"><strong>Name:</strong> @Model.DonorName</p>
+        <p class="card-text"><strong>Age:</strong> @Model.DonorAge</p>
+        <p class="card-text"><strong>Address:</strong> @Model.DonorAddress</p>
+        <p class="card-text"><strong>Phone:</strong> @Model.DonorPhone</p>
+        <p class="card-text"><strong>Gender:</strong> @Model.DonorGender</p>
+        <p class="card-text"><strong>Blood Type:</strong> @Model.DonorBloodType</p>
+        <p class="card-text"><strong>Last Donation Date:</strong> @Model.LastDonationDate</p>
+    }
+    else
+    {
+        <p class="card-text"><strong>Error:</strong> No delete until now.</p>
+    }
 </form>

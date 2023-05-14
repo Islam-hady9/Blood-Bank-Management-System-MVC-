@@ -20,19 +20,43 @@ namespace Blood_Bank_Management_System.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]  // To more security, It ensures that the request originated from the same application.
-		public IActionResult AddHospital(Hospital hospital)
-		{
-			try
-			{
-				_context.Add(hospital);
-				_context.SaveChanges();
-				return View("/Views/Home/MainPage.cshtml");
-			}
-			catch (Exception ex)
-			{
-				ViewBag.exc = ex.Message;
-				return View("/Views/Hospital/Registration.cshtml");
-			}
-		}
-	}
+        public IActionResult AddHospital(Hospital hospital)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _context.Add(hospital);
+                    _context.SaveChanges();
+                    return View("/Views/Home/SignIn.cshtml");
+                }
+                return View("/Views/Hospital/Registration.cshtml");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.exc = ex.Message;
+                return View("/Views/Hospital/Registration.cshtml");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult AddSignIn(string HospitalEmail, string HospitalPassword)
+        {
+            var hospital = _context.Hospitals.FirstOrDefault(u => u.HospitalEmail == HospitalEmail);
+
+            if (hospital == null)
+            {
+                return View("/Views/Hospital/Registration.cshtml");
+            }
+            else if (hospital.Password != HospitalPassword)
+            {
+                ModelState.AddModelError("", "Invalid password");
+                return View("/Views/Home/SignIn.cshtml");
+            }
+
+            HttpContext.Session.SetString("HospitalName", hospital.HospitalName);
+
+            return View("/Views/Home/MainPage.cshtml");
+        }
+    }
 }

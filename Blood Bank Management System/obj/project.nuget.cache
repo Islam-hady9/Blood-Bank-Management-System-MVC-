@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DdBeLDoBJY31lWm1BNpA9WsuOwByDfgI/vNCTpvy4RdPMJXnytc/WsptVVSEEnzed+PYh63nnz3u2LBnIpQzqA==",
+  "dgSpecHash": "U2v2GYrV6aBYlllod/PAu7309ZYpQklZsqt2vFxRmTAf/rFQUbWajlXPgzZHKyocHF7C0y04QH4ROMQyDHbGzw==",
   "success": true,
   "projectFilePath": "D:\\Computers and Information (Level 3 'CS')\\Blood-Bank-Management-System-MVC\\Blood-Bank-Management-System-MVC-\\Blood Bank Management System\\Blood Bank Management System.csproj",
   "expectedPackageFiles": [
@@ -97,6 +97,7 @@
     "C:\\Users\\smart\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\servicestack.interfaces\\6.8.0\\servicestack.interfaces.6.8.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

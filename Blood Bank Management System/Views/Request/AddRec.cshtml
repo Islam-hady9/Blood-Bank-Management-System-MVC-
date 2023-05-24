@@ -1,0 +1,71 @@
+﻿@model Blood_Bank_Management_System.Models.Require
+<h1>Create Request</h1>
+
+<form asp-controller="Request" asp-action="AddRec" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group my-4">
+        <label for="HospitalName" class="control-label">Hospital Name</label>
+        <input type="text" id="HospitalName" name="Hospital.HospitalName"  class="form-control" />
+        @Html.ValidationMessageFor(model => model.Hospital.HospitalName)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalEmail" class="control-label">Hospital Email</label>
+        <input type="text" id="HospitalEmail" name="Hospital.HospitalEmail"  class="form-control" />
+        @Html.ValidationMessageFor(model => model.Hospital.HospitalEmail)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalLocation" class="control-label">Hospital Location</label>
+        <input type="text" id="HospitalLocation" name="Hospital.HospitalLocation"  class="form-control" />
+        @Html.ValidationMessageFor(model => model.Hospital.HospitalLocation)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="HospitalPhone" class="control-label">Hospital Phone</label>
+        <input type="text" id="HospitalPhone" name="Hospital.HospitalPhone" class="form-control" />
+        @Html.ValidationMessageFor(model => model.Hospital.HospitalPhone)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="RequestBloodQuantity" class="control-label">Request Blood Quantity</label>
+        <input type="text" id="RequestBloodQuantity" name="Request.RequestBloodQuantity"  class="form-control" />
+        @Html.ValidationMessageFor(model => model.Request.RequestBloodQuantity)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="RequestDate" class="control-label">Request Date</label>
+        <input type="date" id="RequestDate" name="Request.RequestDate" class="form-control" />
+        @Html.ValidationMessageFor(model => model.Request.RequestDate)
+    </div>
+
+    <div class="my-4">
+        <label for="RequestBloodType">Request Blood Type</label>
+        <select class="form-control form-select" id="RequestBloodType" name="RequestBloodType" required>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+            <option value="Ap">A+</option>
+            <option value="An">A-</option>
+            <option value="Bp">B+</option>
+            <option value="Bn">B-</option>
+            <option value="ABp">AB+</option>
+            <option value="ABn">AB-</option>
+            <option value="Op">O+</option>
+            <option value="On">O-</option>
+        </select>
+        @Html.ValidationMessageFor(model => model.Request.RequestBloodType)
+    </div>
+
+    <div class="form-group my-4">
+        <label for="BloodBankId" class="control-label">Blood Bank Id</label>
+        <input type="text" id="BloodBankId" name="Request.BloodBankId"  class="form-control" />
+        @Html.ValidationMessageFor(model => model.Request.BloodBankId)
+    </div>
+
+    <div class="form-group d-flex justify-content-center align-items-center my-4">
+        <input type="submit" value="Create" class="btn btn-danger" />
+    </div>
+</form>

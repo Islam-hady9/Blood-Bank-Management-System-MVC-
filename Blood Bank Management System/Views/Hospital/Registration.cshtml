@@ -1,9 +1,7 @@
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
 @{
     ViewData["Title"] = "Registration";
 }
+
 <h1 class="d-flex justify-content-center align-items-center">Registration</h1>
 <form asp-controller="Hospital" asp-action="AddHospital" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
@@ -54,6 +52,6 @@
     </div>
 
     <div class="d-flex justify-content-center align-items-center my-4">
-        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>@* value="Create" *@
+        <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>
     </div>
 </form>

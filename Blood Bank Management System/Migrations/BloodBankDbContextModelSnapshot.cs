@@ -34,9 +34,8 @@ namespace Blood_Bank_Management_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BloodBankQuantity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("BloodBankQuantity")
+                        .HasColumnType("int");
 
                     b.Property<int>("BloodGroup")
                         .HasColumnType("int");
@@ -54,6 +53,9 @@ namespace Blood_Bank_Management_System.Migrations
                     b.Property<string>("DonorID")
                         .HasMaxLength(14)
                         .HasColumnType("nvarchar(14)");
+
+                    b.Property<int>("BloodBankId")
+                        .HasColumnType("int");
 
                     b.Property<string>("DonorAddress")
                         .IsRequired()
@@ -82,6 +84,8 @@ namespace Blood_Bank_Management_System.Migrations
 
                     b.HasKey("DonorID");
 
+                    b.HasIndex("BloodBankId");
+
                     b.ToTable("Donors");
                 });
 
@@ -90,6 +94,9 @@ namespace Blood_Bank_Management_System.Migrations
                     b.Property<string>("EmployeeID")
                         .HasMaxLength(14)
                         .HasColumnType("nvarchar(14)");
+
+                    b.Property<int>("BloodBankId")
+                        .HasColumnType("int");
 
                     b.Property<string>("EmployeeAddress")
                         .IsRequired()
@@ -119,6 +126,8 @@ namespace Blood_Bank_Management_System.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EmployeeID");
+
+                    b.HasIndex("BloodBankId");
 
                     b.ToTable("Employees");
                 });
@@ -174,7 +183,7 @@ namespace Blood_Bank_Management_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RequestID"), 1L, 1);
 
-                    b.Property<int>("HospitalToRequestFromHospitalId")
+                    b.Property<int>("BloodBankId")
                         .HasColumnType("int");
 
                     b.Property<string>("RequestBloodQuantity")
@@ -192,20 +201,95 @@ namespace Blood_Bank_Management_System.Migrations
 
                     b.HasKey("RequestID");
 
-                    b.HasIndex("HospitalToRequestFromHospitalId");
+                    b.HasIndex("BloodBankId");
 
                     b.ToTable("Requests");
                 });
 
-            modelBuilder.Entity("Blood_Bank_Management_System.Models.Request", b =>
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Require", b =>
                 {
-                    b.HasOne("Blood_Bank_Management_System.Models.Hospital", "HospitalToRequestFrom")
-                        .WithMany()
-                        .HasForeignKey("HospitalToRequestFromHospitalId")
+                    b.Property<int>("HospitalId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RequestID")
+                        .HasColumnType("int");
+
+                    b.HasKey("HospitalId");
+
+                    b.HasIndex("RequestID");
+
+                    b.ToTable("Requires");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Donor", b =>
+                {
+                    b.HasOne("Blood_Bank_Management_System.Models.BloodBank", "BloodBank")
+                        .WithMany("Donors")
+                        .HasForeignKey("BloodBankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("HospitalToRequestFrom");
+                    b.Navigation("BloodBank");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Employee", b =>
+                {
+                    b.HasOne("Blood_Bank_Management_System.Models.BloodBank", "BloodBank")
+                        .WithMany("Employees")
+                        .HasForeignKey("BloodBankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BloodBank");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Request", b =>
+                {
+                    b.HasOne("Blood_Bank_Management_System.Models.BloodBank", "BloodBank")
+                        .WithMany("Requests")
+                        .HasForeignKey("BloodBankId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BloodBank");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Require", b =>
+                {
+                    b.HasOne("Blood_Bank_Management_System.Models.Hospital", "Hospital")
+                        .WithMany("Requires")
+                        .HasForeignKey("HospitalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Blood_Bank_Management_System.Models.Request", "Request")
+                        .WithMany("Requires")
+                        .HasForeignKey("RequestID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hospital");
+
+                    b.Navigation("Request");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.BloodBank", b =>
+                {
+                    b.Navigation("Donors");
+
+                    b.Navigation("Employees");
+
+                    b.Navigation("Requests");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Hospital", b =>
+                {
+                    b.Navigation("Requires");
+                });
+
+            modelBuilder.Entity("Blood_Bank_Management_System.Models.Request", b =>
+                {
+                    b.Navigation("Requires");
                 });
 #pragma warning restore 612, 618
         }

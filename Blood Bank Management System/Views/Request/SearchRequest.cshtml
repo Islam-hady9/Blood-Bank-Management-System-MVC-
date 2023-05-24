@@ -1,20 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Search";
 }
-@model Request;
+@model List<Require>
 <div class="container">
     <h1 class="display-4">Result Search</h1>
     <div class="card bg-danger">
         <div class="card-body" style="color: #ffdfdf;">
             <h5 class="card-title">Request Details</h5><hr>
-            @if (Model != null)
+            @if (Model != null && Model.Count != 0)
             {
-                <p class="card-text"><strong>ID:</strong> @Model.RequestID</p>
-                <p class="card-text"><strong>To:</strong> @Model.HospitalToRequestFrom</p>
-                <p class="card-text"><strong>Status:</strong> @Model.RequestStatus</p>
-                <p class="card-text"><strong>Blood Quantity:</strong> @Model.RequestBloodQuantity</p>
-                <p class="card-text"><strong>Request Date:</strong> @Model.RequestDate</p>
-                <p class="card-text"><strong>Blood Type:</strong> @Model.RequestBloodType</p>
+                @foreach (var re in Model)
+                {
+                    <p class="card-text"><strong>ID:</strong> @re.Request.RequestID</p>
+                    <p class="card-text"><strong>Hospital Name:</strong> @re.Hospital.HospitalName</p>
+                    <p class="card-text"><strong>E-mail:</strong> @re.Hospital.HospitalEmail</p>
+                    <p class="card-text"><strong>Hospital Location:</strong> @re.Hospital.HospitalLocation</p>
+                    <p class="card-text"><strong>Hospital Phone:</strong> @re.Hospital.HospitalPhone</p>
+                    <p class="card-text"><strong>Blood Type:</strong> @re.Request.RequestBloodType</p>
+                    <p class="card-text"><strong>Quantity:</strong> @re.Request.RequestBloodQuantity</p>
+                    <p class="card-text"><strong>Request Status:</strong> @re.Request.RequestStatus</p>
+                    <p class="card-text"><strong>Request Date:</strong> @re.Request.RequestDate</p>
+                    <p class="card-text"><strong>BloodBankID:</strong> @re.Request.BloodBankId</p>
+                }
             }
             else
             {

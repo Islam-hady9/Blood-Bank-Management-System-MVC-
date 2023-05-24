@@ -1,22 +1,26 @@
 ﻿@{
     ViewData["Title"] = "Donor Search";
 }
-@model Donor;
+@model List<Donor>
 <div class="container">
     <h1 class="display-4">Result Search</h1>
     <div class="card bg-danger">
         <div class="card-body" style="color: #ffdfdf;">
             <h5 class="card-title">Donor Details</h5><hr>
-            @if (Model != null)
+            @if (Model != null && Model.Count != 0)
             {
-                <p class="card-text"><strong>ID:</strong> @Model.DonorID</p>
-                <p class="card-text"><strong>Name:</strong> @Model.DonorName</p>
-                <p class="card-text"><strong>Age:</strong> @Model.DonorAge</p>
-                <p class="card-text"><strong>Address:</strong> @Model.DonorAddress</p>
-                <p class="card-text"><strong>Phone:</strong> @Model.DonorPhone</p>
-                <p class="card-text"><strong>Gender:</strong> @Model.DonorGender</p>
-                <p class="card-text"><strong>BloodType:</strong> @Model.DonorBloodType</p>
-                <p class="card-text"><strong>Last Donation Date:</strong> @Model.LastDonationDate</p>
+                @foreach (var doner in Model)
+                {
+                    <p class="card-text"><strong>ID:</strong> @doner.DonorID</p>
+                    <p class="card-text"><strong>Name:</strong> @doner.DonorName</p>
+                    <p class="card-text"><strong>Age:</strong> @doner.DonorAge</p>
+                    <p class="card-text"><strong>Address:</strong> @doner.DonorAddress</p>
+                    <p class="card-text"><strong>Phone:</strong> @doner.DonorPhone</p>
+                    <p class="card-text"><strong>Gender:</strong> @doner.DonorGender</p>
+                    <p class="card-text"><strong>BloodType:</strong> @doner.DonorBloodType</p>
+                    <p class="card-text"><strong>Last Donation Date:</strong> @doner.LastDonationDate</p>
+                    <p class="card-text"><strong>BloodBankID:</strong>@doner.BloodBankId</p>
+                }
             }
             else
             {

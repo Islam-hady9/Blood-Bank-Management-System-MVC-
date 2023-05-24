@@ -8,6 +8,9 @@
 table, table td, table th {
     border: 2px solid #e5b2b2;
 }
+table td, table th {
+    width: fit-content;
+}
 table {
     width: 100%;
     margin: 0 auto 1%;
@@ -68,7 +71,7 @@ section button {
     color: #dc3545;
     font-size: 25px;
     padding: 3px 15px;
-    border: 2px solid #dc3545;
+    border: 3px solid #dc3545;
 }
 section button:hover {
     color: white;
@@ -83,5 +86,5 @@ section input {
     border-radius: 7px;
 }
 button span {
-    padding-right: 15px;
+    padding-right: 13px;
 }

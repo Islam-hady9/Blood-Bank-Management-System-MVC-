@@ -33,40 +33,20 @@ namespace Blood_Bank_Management_System.Controllers
             return View();
         }
 
-        public IActionResult Management()
-        {
-            return View();
-        }
-
-        public IActionResult Donors()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult BloodBank()
-        {
-            return View();
-        }
+        // public IActionResult RequestBlood()
+        // {
+        //     return View();
+        // }
 
-        public IActionResult RequestBlood()
-        {
-            return View();
-        }
-
-        public IActionResult SendRequest()
-        {
-            return View();
-        }
-
-        public IActionResult ViewRequests()
-        {
-            return View();
-        }
+        // public IActionResult SendRequest()
+        // {
+        //     return View();
+        // }
     }
 }

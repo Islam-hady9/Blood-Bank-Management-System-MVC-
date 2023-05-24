@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blood_Bank_Management_System.Models
 {
@@ -7,12 +8,12 @@ namespace Blood_Bank_Management_System.Models
     public class Employee
     {
         [Key]
-        [StringLength(14)]
+        [StringLength(14, MinimumLength = 14, ErrorMessage = "Employee ID should be exactly 14 at length.")]
         [Required(ErrorMessage = "Employee ID is required.")]
-        [RegularExpression(@"^\d+$", ErrorMessage = "Employee ID should contain only digits.")]
         public string EmployeeID { get; set; }
 
         [Required(ErrorMessage = "Employee Name is required.")]
+        [RegularExpression(@"^[A-Za-z\s]+$", ErrorMessage = "Employee Name should contain only letters and spaces")]
         public string EmployeeName { get; set; }
 
         [Required(ErrorMessage = "Employee Age is required.")]
@@ -22,11 +23,12 @@ namespace Blood_Bank_Management_System.Models
         [Required(ErrorMessage = "Employee Address is required.")]
         public string EmployeeAddress { get; set; }
 
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         [Required(ErrorMessage = "Employee Email is required.")]
         public string EmployeeEmail { get; set; }
 
-        [StringLength(11)]
         [Required(ErrorMessage = "Employee Phone is required.")]
+        [StringLength(11, MinimumLength = 11, ErrorMessage = "Employee Phone should be exactly 11 length.")]
         [RegularExpression(@"^01[0125]\d{8}$", ErrorMessage = "Employee Phone should start with '01' and have a length of 11.")]
         public string EmployeePhone { get; set; }
 
@@ -34,11 +36,12 @@ namespace Blood_Bank_Management_System.Models
         public EmployeeType Field { get; set; }
 
         [DefaultValue("default.png")]
-        [Required(ErrorMessage = "Image Name is required.")]
         public string ImageName { get; set; }
 
-        // To establish relationships between Employee and Request entities.
-        // public ICollection<Request> Enrollments { get; set; }    // As ArrayList.
+        public int BloodBankId { get; set; }
+
+        [ForeignKey("BloodBankId")]
+        public BloodBank? BloodBank { get; set; }
 
         // Default Constructor
         public Employee()

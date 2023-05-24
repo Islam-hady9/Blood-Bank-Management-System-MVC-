@@ -1,27 +1,102 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "Blood Search";
 }
-@model BloodBank;
+
+@* BloodBank *@
 <div class="container">
     <h1 class="display-4">Result Search</h1>
     <div class="card bg-danger">
         <div class="card-body" style="color: #ffdfdf;">
-            <h5 class="card-title">Blood Details</h5><hr>
-            @if (Model != null)
+            <h5 class="card-title">BloodBank Details</h5><hr>
+
+                @if (ViewData["BloodBanks"] != null)
+                {
+                    var bloodBank = (BloodBank)ViewData["BloodBanks"];
+                    <p class="card-text"><strong>BloodBank ID: </strong>@bloodBank.BloodBankId</p>
+                    <p class="card-text"><strong>BloodBank Email :</strong>@bloodBank.BloodBankEmail</p>
+                    <p class="card-text"><strong>BloodBank Group :</strong>@bloodBank.BloodGroup</p>
+                    <p class="card-text"><strong>BloodBank Quantity :</strong>@bloodBank.BloodBankQuantity</p>
+                    <p class="card-text"><strong>BloodBank Status :</strong>@bloodBank.StatusOfBlood</p>
+                }
+        </div>
+    </div>
+</div>
+<br>
+
+@* Employee *@
+<div class="container">
+<div class="card bg-danger">
+    <div class="card-body" style="color: #ffdfdf;">
+        <h5 class="card-title">Employees Details</h5><hr>
+
+            @* If ViewData["Employees"] is type list do this if null no *@
+            @if (ViewData["Employees"] is List<Employee> employees)
             {
-                    <p class="card-text"><strong>Blood ID:</strong> @Model.BloodBankId</p>
-                    <p class="card-text"><strong>Blood Bank Email:</strong> @Model.BloodBankEmail</p>
-                    <p class="card-text"><strong>Blood Group :</strong> @Model.BloodGroup</p>
-                    <p class="card-text"><strong>Blood Quantity :</strong> @Model.BloodBankQuantity</p>
-                    <p class="card-text"><strong>Status Of Blood:</strong> @Model.StatusOfBlood</p>
+                @foreach (var item in employees)
+                {
+                    <p class="card-text"><strong>Employee ID: </strong>@item.EmployeeID</p>
+                    <p class="card-text"><strong>Employee Name :</strong>@item.EmployeeName</p>
+                    <p class="card-text"><strong>Employee Age :</strong>@item.EmployeeAge</p>
+                    <p class="card-text"><strong>Employee Address :</strong>@item.EmployeeAddress</p>
+                    <p class="card-text"><strong>Employee Phone :</strong>@item.EmployeePhone</p>
+                    <p class="card-text"><strong>Employee Email :</strong>@item.EmployeeEmail</p>
+                    <p class="card-text"><strong>Employee Field :</strong>@item.Field</p>
+                    <p class="card-text"><strong>Employee Image :</strong>@item.ImageName</p>
+                    <p class="card-text"><strong>BloodBank ID: </strong>@item.BloodBankId</p>
+                    <br>
+                }
             }
-            else
+        </div>
+    </div>
+</div>
+<br>
+
+@* Donor *@
+<div class="container">
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Donors Details</h5><hr>
+
+            @if (ViewData["Donors"] is List<Donor> donors)
             {
-                <p class="card-text"><strong>Error:</strong> You should enter a specific existing id.</p>
+                @foreach (var item in donors)
+                {
+                    <p class="card-text"><strong>Donor ID: </strong>@item.DonorID</p>
+                    <p class="card-text"><strong>Donor Name :</strong>@item.DonorName</p>
+                    <p class="card-text"><strong>Donor Age :</strong> @item.DonorAge</p>
+                    <p class="card-text"><strong>Donor Address :</strong>@item.DonorAddress</p>
+                    <p class="card-text"><strong>Donor Phone :</strong>@item.DonorPhone</p>
+                    <p class="card-text"><strong>Donor Gender :</strong>@item.DonorGender</p>
+                    <p class="card-text"><strong>DonorBloodType :</strong>@item.DonorBloodType</p>
+                    <p class="card-text"><strong>LastDonationDate :</strong>@item.LastDonationDate</p>
+                    <p class="card-text"><strong>BloodBank ID: </strong>@item.BloodBankId</p>
+                    <br>
+                }
             }
+        </div>
+    </div>
+</div>
+<br>
+
+@* Request *@
+<div class="container">
+    <div class="card bg-danger">
+        <div class="card-body" style="color: #ffdfdf;">
+            <h5 class="card-title">Requests Details</h5><hr>
+
+                @if (ViewData["Requests"] is List<Request> requests)
+                {
+                    @foreach (var item in requests)
+                    {
+                        <p class="card-text"><strong>Request ID: </strong>@item.RequestID</p>
+                        <p class="card-text"><strong>Request Status: </strong>@item.RequestStatus</p>
+                        <p class="card-text"><strong>RequestBloodQuantity: </strong>@item.RequestBloodQuantity</p>
+                        <p class="card-text"><strong>RequestDate :</strong>@item.RequestDate</p>
+                        <p class="card-text"><strong>RequestBloodType :</strong>@item.RequestBloodType</p>
+                        <p class="card-text"><strong>BloodBank ID: </strong>@item.BloodBankId</p>
+                        <br>
+                    }
+                }
         </div>
     </div>
 </div>

@@ -1,22 +1,7 @@
 @{
     ViewData["Title"] = "BloodBank";
 }
-@*@{
-    var blood = ViewBag.bloodBank as List<BloodBank>;
-}
 
-<!-- Use the employees list as needed -->
-@if (blood != null)
-{
-    @foreach (var b in blood)
-    {
-        <!-- Display employee information -->
-        <p>@b.BloodBankId</p>
-        <p>@b.BloodBankEmail</p>
-        <p>@b.BloodBankQuantity</p>
-        <!-- etc. -->
-    }
-}*@
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
     <link href="~/css/glyphicon.css" rel="stylesheet">
@@ -52,6 +37,7 @@
             @{
                 @model IEnumerable<BloodBank>
                 @if (Model != null)
+                {
                     @foreach (var el in Model)
                     {
                         @if (el != null)
@@ -65,6 +51,7 @@
                             </tr>
                         }
                     }
+                }
             }
         </tbody>
     </table>
@@ -77,9 +64,6 @@
         </div>
         <div class="button-div px-4">
             <button><a class="text-white" asp-controller="BloodBank" asp-action="DeleteBlood">Delete</a></button>
-        </div>
-        <div class="button-div px-4">
-            <button><a class="text-white" asp-controller="BloodBank" asp-action="Show">Show hiddens</a></button>
         </div>
     </div>
 </body>

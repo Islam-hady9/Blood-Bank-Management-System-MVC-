@@ -1,8 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    ViewData["Title"] = "ViewRequests";
+﻿@{
+    ViewData["Title"] = "View Requests";
 }
 <head>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
@@ -10,15 +7,38 @@
     <link rel="stylesheet" href="~/css/ViewRequests.css" asp-append-version="true" />
 </head>
 <body class="body">
-    <form class="form-inline" method="get" asp-controller="Request" asp-action="SearchRequest">
-        <div class="input-group">
-            <input type="search" class="form-control mx-3" name="id" placeholder="search by id">
-            <section class="input-group-append">
-                <button type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
-            </section>
+    <form class="form-inline" asp-controller="Request" asp-action="SearchForRequestByEveryThing" method="get">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="id" placeholder="Search by id">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="name" placeholder="Search by name">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="location" placeholder="Search by location">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="blood" placeholder="Search by blood type">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group d-flex justify-content-center align-items-center">
+                    <section class="input-group-append">
+                        <button type="submit" class="btn btn-outline-danger"><span class="glyphicon glyphicon-search"></span>Search</button>
+                    </section>
+                </div>
+            </div>
         </div>
     </form>
-    <table>
+    <table class="table">
         <caption>Requests</caption>
         <thead>
             <tr>
@@ -31,44 +51,45 @@
                 <th>Quantity</th>
                 <th>Request Status</th>
                 <th>Request Date</th>
+                <th>BloodBankID</th>
             </tr>
         </thead>
         <tbody>
-            @{
-                @model IEnumerable<Request>
+              @{
+                @model IEnumerable<Require>
                 @if (Model != null)
+                {
                     @foreach (var reqs in Model)
                     {
-                        @if (reqs != null)
+                        @if ((reqs.Hospital != null) && (reqs.Request != null))
                         {
                             <tr>
-                                <td>@reqs.RequestID</td>
-                                <td>@reqs.HospitalToRequestFrom.HospitalName</td>
-                                <td>@reqs.HospitalToRequestFrom.HospitalEmail</td>
-                                <td>@reqs.HospitalToRequestFrom.HospitalLocation</td>
-                                <td>@reqs.HospitalToRequestFrom.HospitalPhone</td>
-                                <td>@reqs.RequestBloodType</td>
-                                <td>@reqs.RequestBloodQuantity</td>
-                                <td>@reqs.RequestStatus</td>
-                                <td>@reqs.RequestDate</td>
+                                <td>@reqs.Request.RequestID</td>
+                                <td>@reqs.Hospital.HospitalName</td>
+                                <td>@reqs.Hospital.HospitalEmail</td>
+                                <td>@reqs.Hospital.HospitalLocation</td>
+                                <td>@reqs.Hospital.HospitalPhone</td>
+                                <td>@reqs.Request.RequestBloodType</td>
+                                <td>@reqs.Request.RequestBloodQuantity</td>
+                                <td>@reqs.Request.RequestStatus</td>
+                                <td>@reqs.Request.RequestDate</td>
+                                <td>@reqs.Request.BloodBankId</td>
                             </tr>
                         }
                     }
+                }
             }
         </tbody>
     </table>
     <div class="d-flex justify-content-center align-items-center">
         <div class="button-div px-4">
-            <button><a class="text-white" asp-controller="Request" asp-action="Add">Add</a></button>
+            <button><a class="text-white" asp-controller="Request" asp-action="AddRec">Add</a></button>
         </div>
         <div class="button-div px-4">
             <button><a class="text-white" asp-controller="Request" asp-action="Update">Update</a></button>
         </div>
         <div class="button-div px-4">
             <button><a class="text-white" asp-controller="Request" asp-action="Delete">Delete</a></button>
-        </div>
-        <div class="button-div px-4">
-            <button><a class="text-white" asp-controller="Request" asp-action="Show">Show hiddens</a></button>
         </div>
     </div>
 </body>

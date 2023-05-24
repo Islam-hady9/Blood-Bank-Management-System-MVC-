@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blood_Bank_Management_System.Models
@@ -12,27 +11,45 @@ namespace Blood_Bank_Management_System.Models
     {
         // Blood Bank Data & Data Annotation...
         [Key]
-        //[Required(ErrorMessage = "Blood Bank ID is required.")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int BloodBankId { get; set; }
+
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         [Required(ErrorMessage = "Blood Bank Email is required.")]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Blood Bank Email is invalid")]
         public string BloodBankEmail { get; set; }
+
         [Required(ErrorMessage = "Blood Bank Group is required.")]
         public BloodType BloodGroup { get; set; }
+
         [Required(ErrorMessage = "Blood Bank Quantity is required.")]
-        public string BloodBankQuantity { get; set; }
+        [Range(0, 5, ErrorMessage = "Blood Bank Quantity is between 1 and 5.")]
+        public int BloodBankQuantity { get; set; }
+
         [Required(ErrorMessage = "Blood Bank Status is required.")]
         public BloodStatus StatusOfBlood { get; set; }
+
+        public ICollection<Employee>? Employees { get; set; }
+
+        public ICollection<Donor>? Donors { get; set; }
+
+        public ICollection<Request>? Requests { get; set; }
 
         // The Defult Constractor
         public BloodBank()
         {
-            //this.BloodBankId = 1;
+            // this.BloodBankId = 1;
             this.BloodBankEmail = string.Empty;
             this.BloodGroup = BloodType.A;
-            this.BloodBankQuantity = "0";
+            this.BloodBankQuantity = 0;
             this.StatusOfBlood = BloodStatus.Fresh;
+            Employees = new List<Employee>();
+            Donors = new List<Donor>();
+            Requests = new List<Request>();
+        }
+
+        public static implicit operator int(BloodBank? v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

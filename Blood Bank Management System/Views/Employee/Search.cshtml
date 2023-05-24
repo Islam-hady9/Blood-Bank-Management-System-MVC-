@@ -1,22 +1,27 @@
 @{
     ViewData["Title"] = "Employee Search";
 }
-@model Employee;
+@model List<Employee>
 <div class="container">
     <h1 class="display-4">Result Search</h1>
     <div class="card bg-danger">
         <div class="card-body" style="color: #ffdfdf;">
             <h5 class="card-title">Employee Details</h5><hr>
-            @if (Model != null)
+            @if (Model != null && Model.Count != 0)
             {
-                <p class="card-text"><strong>ID:</strong> @Model.EmployeeID</p>
-                <p class="card-text"><strong>Name:</strong> @Model.EmployeeName</p>
-                <p class="card-text"><strong>Age:</strong> @Model.EmployeeAge</p>
-                <p class="card-text"><strong>Address:</strong> @Model.EmployeeAddress</p>
-                <p class="card-text"><strong>Email:</strong> @Model.EmployeeEmail</p>
-                <p class="card-text"><strong>Phone:</strong> @Model.EmployeePhone</p>
-                <p class="card-text"><strong>Field:</strong> @Model.Field</p>
-                <p class="card-text"><strong>Image Name:</strong> @Model.ImageName.Substring(Model.ImageName.IndexOf("Img\\") + 4)</p>
+                @foreach (var employee in Model)
+                {
+                    <p class="card-text"><strong>ID:</strong> @employee.EmployeeID</p>
+                    <p class="card-text"><strong>Name:</strong> @employee.EmployeeName</p>
+                    <p class="card-text"><strong>Age:</strong> @employee.EmployeeAge</p>
+                    <p class="card-text"><strong>Address:</strong> @employee.EmployeeAddress</p>
+                    <p class="card-text"><strong>Email:</strong> @employee.EmployeeEmail</p>
+                    <p class="card-text"><strong>Phone:</strong> @employee.EmployeePhone</p>
+                    <p class="card-text"><strong>Field:</strong> @employee.Field</p>
+                    <p class="card-text"><strong>Image Name:</strong> @employee.ImageName</p>
+                    <p class="card-text"><strong>BloodBankID:</strong> @employee.BloodBankId</p>
+                    <hr>
+                }
             }
             else
             {

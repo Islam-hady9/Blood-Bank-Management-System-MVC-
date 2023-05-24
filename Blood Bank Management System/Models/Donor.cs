@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Blood_Bank_Management_System.Models
 {
@@ -22,27 +23,40 @@ namespace Blood_Bank_Management_System.Models
     {
         // Data Members...
         [Required(ErrorMessage = "Donor Name is required.")]
+        [RegularExpression(@"^[A-Za-z\s]+$", ErrorMessage = "Donor Name should contain only letters and spaces")]
         public string DonorName { get; set; }
+
         [Key]
-        [StringLength(14)]
         [Required(ErrorMessage = "Donor ID is required.")]
         [RegularExpression(@"^\d+$", ErrorMessage = "Donor ID should contain only digits.")]
+        [StringLength(14, MinimumLength = 14, ErrorMessage = "Donor ID should be exactly 14 characters.")]
         public string DonorID { get; set; }
+
         [StringLength(11)]
         [Required(ErrorMessage = "Donor Phone is required.")]
         [RegularExpression(@"^01[0125]\d{8}$", ErrorMessage = "Donor Phone should start with '01' and have a length of 11.")]
         public string DonorPhone { get; set; }
+
         [Required(ErrorMessage = "Donor Address is required.")]
         public string DonorAddress { get; set; }
+
         [Required(ErrorMessage = "Donor Age is required.")]
         [Range(18, 60, ErrorMessage = "Donor Age should be between 18 and 60.")]
         public int DonorAge { get; set; }
+
         [Required(ErrorMessage = "Donor Gender is required.")]
         public Gender DonorGender { get; set; }
+
         [Required(ErrorMessage = "Donor Blood Type is required.")]
         public BloodType DonorBloodType { get; set; }
+
         [Required(ErrorMessage = "Donor Last Donation Date is required.")]
         public DateTime LastDonationDate { get; set; }
+
+        public int BloodBankId { get; set; }
+
+        [ForeignKey("BloodBankId")]
+        public BloodBank? BloodBank { get; set; }
 
         // Default Constructor...
         public Donor()

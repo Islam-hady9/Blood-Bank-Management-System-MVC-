@@ -1,12 +1,12 @@
 @{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "Update Employee";
 }
-<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
-<form asp-controller="Employee" asp-action="RemoveIdvb" method="post" enctype="multipart/form-data">
+<h1 class="d-flex justify-content-center align-items-center">View for updating an employee by id</h1>
+<form asp-controller="Employee" asp-action="GetEmployeeDataById" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
 
     <div class="my-4">
-        <label>Id for deleting</label>
+        <label>Id for updating</label>
         <input type="text" class="form-control" name="id" required>
     </div>
 
@@ -14,3 +14,106 @@
         <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
     </div>
 </form>
+
+@* Form to modify data in *@
+@model Employee;
+@if (Model != null)
+{
+    <h1 class="d-flex justify-content-center align-items-center">Employee data that you need to modify</h1>
+    <form asp-controller="Employee" asp-action="UpdateEmployee" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div class="my-4">
+            <label for="EmployeeName">Employee Name</label>
+            <input type="text" class="form-control" id="EmployeeName" name="EmployeeName" value="@Model.EmployeeName" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeeName,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="EmployeeID">Employee ID</label>
+            <input type="text" class="form-control" id="EmployeeID" name="EmployeeID" value="@Model.EmployeeID" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeeID,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="EmployeePhone">Employee Phone</label>
+            <input type="text" class="form-control" id="EmployeePhone" name="EmployeePhone" value="@Model.EmployeePhone" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeePhone,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="EmployeeAddress">Employee Address</label>
+            <input type="text" class="form-control" id="EmployeeAddress" name="EmployeeAddress" value="@Model.EmployeeAddress" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeeAddress,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="EmployeeEmail">Employee Email</label>
+            <input type="email" class="form-control" id="EmployeeEmail" name="EmployeeEmail" value="@Model.EmployeeEmail" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeeEmail,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="EmployeeAge">Employee Age</label>
+            <input type="number" min="25" max="60" class="form-control" id="EmployeeAge" name="EmployeeAge" value="@Model.EmployeeAge" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.EmployeeAge,"")</span>
+        </div>
+
+        @* enum *@
+        <div class="my-4">
+            <label for="Field">Field</label>
+            <select class="form-control form-select" id="Field" name="Field" required>
+                @{
+                    if (@Model.Field.ToString() == "Manager")
+                    {
+                        <option value="Manager" selected>Manager</option>
+                    }
+                    else
+                    {
+                        <option value="Manager">Manager</option>
+                    }
+
+                    if (@Model.Field.ToString() == "Technician")
+                    {
+                        <option value="Technician" selected>Technician</option>
+                    }
+                    else
+                    {
+                        <option value="Technician">Technician</option>
+                    }
+                }
+            </select>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.Field,"")</span>
+        </div>
+
+        @* file uploaded *@
+        <div class="my-4">
+            <label for="uploaded_file">Image File</label>
+            <input class="form-control" type="file" id="uploaded_file" name="uploaded_file" required>
+            @if (!string.IsNullOrEmpty(Model.ImageName))
+            {
+                <p>Current image: @Model.ImageName</p>
+            }
+        </div>
+
+        <div class="my-4">
+            <label for="BloodBankID">BloodBank ID</label>
+            <input class="form-control" type="number" min="0" id="BloodBankID" name="BloodBankID" value="@Model.BloodBankId">
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center my-4">
+            <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>@* value="Create" *@
+        </div>
+    </form>
+}
+else
+{
+    <div class="container">
+        <div class="card bg-danger">
+            <div class="card-body" style="color: #ffdfdf;">
+                <h5 class="card-title">Employee Details</h5><hr>
+                <p class="card-text">No correct employee id is entered.</p>
+            </div>
+        </div>
+    </div>
+}

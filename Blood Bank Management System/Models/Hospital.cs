@@ -13,7 +13,7 @@ namespace Blood_Bank_Management_System.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int HospitalId { get; set; }
 
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
         [Required(ErrorMessage = "Hospital Email is required.")]
         public string HospitalEmail { get; set; }
 
@@ -40,18 +40,21 @@ namespace Blood_Bank_Management_System.Models
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Not matched")]
         public string ConfirmPassword { get; set; }
+      
+        public ICollection<Require>? Requires { get; set; }
 
         public Hospital()
         {
             this.HospitalName = string.Empty;
             this.HospitalEmail = string.Empty;
-            //this.HospitalId = 1;
+            // this.HospitalId = 1;
             this.HospitalLocation = string.Empty;
             this.HospitalPhone = string.Empty;
             this.ReceivedUnits = 0;
             this.DateOfAcception = DateTime.Now;
             this.Password = string.Empty;
             this.ConfirmPassword = string.Empty;
+            Requires = new List<Require>();
         }
     }
 }

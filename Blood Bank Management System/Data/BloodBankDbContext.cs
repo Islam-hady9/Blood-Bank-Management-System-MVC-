@@ -10,7 +10,8 @@ namespace Blood_Bank_Management_System.Data
         public DbSet<Donor> Donors { get; set; }
         public DbSet<BloodBank> BloodBanks { get; set; }
         public DbSet<Request> Requests { get; set; }
-
+        public DbSet<Require> Requires { get; set; }
+        
         public BloodBankDbContext(DbContextOptions<BloodBankDbContext> options) : base(options)
         {
             Hospitals = Set<Hospital>();
@@ -18,6 +19,7 @@ namespace Blood_Bank_Management_System.Data
             Donors = Set<Donor>();
             BloodBanks = Set<BloodBank>();
             Requests = Set<Request>();
+            Requires = Set<Require>();
         }
     }
 }

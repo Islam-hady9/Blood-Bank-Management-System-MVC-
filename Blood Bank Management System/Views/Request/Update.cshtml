@@ -1,12 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "Update Request";
 }
-<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
-<form asp-controller="Request" asp-action="RemoveIdvb" method="post" enctype="multipart/form-data">
+<h1 class="d-flex justify-content-center align-items-center">Update Request Data</h1>
+<form asp-controller="Request" asp-action="GetRequestDataById" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
 
     <div class="my-4">
-        <label>Id for deleting</label>
+        <label>Id for updating</label>
         <input type="text" class="form-control" name="id" required>
     </div>
 
@@ -14,3 +14,230 @@
         <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
     </div>
 </form>
+
+@model List<Require>
+@if (Model != null && Model.Count != 0)
+{
+    @foreach (var re in Model)
+    {
+        <h1 class="d-flex justify-content-center align-items-center">Request data that you need to modify</h1>
+        <form asp-controller="Request" asp-action="UpdateRequest" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="form-group my-4">
+                <label for="HospitalName" class="control-label">Hospital Name</label>
+                <input type="text" id="HospitalName" name="Hospital.HospitalName" value="@re.Hospital.HospitalName" class="form-control">
+                @Html.ValidationMessageFor(model => re.Hospital.HospitalName)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="HospitalEmail" class="control-label">Hospital Email</label>
+                <input type="text" id="HospitalEmail" name="Hospital.HospitalEmail" value="@re.Hospital.HospitalEmail" class="form-control">
+                @Html.ValidationMessageFor(model => re.Hospital.HospitalEmail)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="HospitalLocation" class="control-label">Hospital Location</label>
+                <input type="text" id="HospitalLocation" name="Hospital.HospitalLocation" value="@re.Hospital.HospitalLocation" class="form-control">
+                @Html.ValidationMessageFor(model => re.Hospital.HospitalLocation)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="HospitalPhone" class="control-label">Hospital Phone</label>
+                <input type="text" id="HospitalPhone" name="Hospital.HospitalPhone" value="@re.Hospital.HospitalPhone" class="form-control">
+                @Html.ValidationMessageFor(model => re.Hospital.HospitalPhone)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="RequestBloodQuantity" class="control-label">Request Blood Quantity</label>
+                <input type="text" id="RequestBloodQuantity" name="Request.RequestBloodQuantity" value="@re.Request.RequestBloodQuantity" class="form-control" />
+                @Html.ValidationMessageFor(model => re.Request.RequestBloodQuantity)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="RequestDate" class="control-label">Request Date</label>
+                <input type="date" id="RequestDate" name="Request.RequestDate" value="@re.Request.RequestDate.ToString("yyyy-MM-dd")" class="form-control">
+                @Html.ValidationMessageFor(model => re.Request.RequestDate)
+            </div>
+
+            <div class="my-4">
+                <label for="RequestBloodType">Request Blood Type</label>
+                <select class="form-control form-select" id="BloodGroup" name="BloodGroup" required>
+                    @{
+                        if (re.Request.RequestBloodType.ToString() == "A")
+                        {
+                            <option value="A" selected>A</option>
+                        }
+                        else
+                        {
+                            <option value="A">A</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "B")
+                        {
+                            <option value="B" selected>B</option>
+                        }
+                        else
+                        {
+                            <option value="B">B</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "AB")
+                        {
+                            <option value="AB" selected>AB</option>
+                        }
+                        else
+                        {
+                            <option value="AB">AB</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "O")
+                        {
+                            <option value="O" selected>O</option>
+                        }
+                        else
+                        {
+                            <option value="O">O</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "Ap")
+                        {
+                            <option value="Ap" selected>A+</option>
+                        }
+                        else
+                        {
+                            <option value="Ap">A+</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "An")
+                        {
+                            <option value="An" selected>A-</option>
+                        }
+                        else
+                        {
+                            <option value="An">A-</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "Bp")
+                        {
+                            <option value="Bp" selected>B+</option>
+                        }
+                        else
+                        {
+                            <option value="Bp">B+</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "Bn")
+                        {
+                            <option value="Bn" selected>B-</option>
+                        }
+                        else
+                        {
+                            <option value="Bn">B-</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "ABp")
+                        {
+                            <option value="ABp" selected>AB+</option>
+                        }
+                        else
+                        {
+                            <option value="ABp">AB+</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "ABn")
+                        {
+                            <option value="ABn" selected>AB-</option>
+                        }
+                        else
+                        {
+                            <option value="ABn">AB-</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "Op")
+                        {
+                            <option value="Op" selected>O+</option>
+                        }
+                        else
+                        {
+                            <option value="Op">O+</option>
+                        }
+                        
+                        if (re.Request.RequestBloodType.ToString() == "On")
+                        {
+                            <option value="On" selected>O-</option>
+                        }
+                        else
+                        {
+                            <option value="On">O-</option>
+                        }
+                    }
+                </select>
+                @Html.ValidationMessageFor(model => re.Request.RequestBloodType)
+            </div>
+
+            <div class="form-group my-4">
+                <label for="BloodBankId" class="control-label">Blood Bank Id</label>
+                <input type="text" id="BloodBankId" name="Request.BloodBankId" value="@re.Request.BloodBankId" class="form-control">
+                <span class="text-danger">Note: Do not modify the BloodBankId</span>
+            </div>
+
+            <div class="form-group d-flex justify-content-center align-items-center my-4">
+                <input type="submit" value="Create" class="btn btn-danger">
+            </div>
+        </form>
+        @* <form asp-controller="BloodBank" asp-action="Add" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <div class="my-4">
+                <label for="BloodBankEmail">Blood Bank Email</label>
+                        <input type="email" class="form-control" id="BloodBankEmail" name="BloodBankEmail" value="@re.Hospital.HospitalEmail" required>
+                <span class="text-danger">@Html.ValidationMessageFor(model=>re.Hospital.HospitalEmail,"")</span>
+            </div>
+
+            @* enum *
+            <div class="my-4">
+                <label for="BloodGroup">Blood Groups</label>
+                
+                <span class="text-danger">@Html.ValidationMessageFor(model=>re.Request.RequestBloodType,"")</span>
+            </div>
+
+            <div class="my-4">
+                <label for="BloodBankQuantity">BloodBankQuantity</label>
+                        <input type="number" min="0" max="5" class="form-control" id="BloodBankQuantity" name="BloodBankQuantity" value="@re.Request.RequestBloodQuantity" required>
+                <span class="text-danger">@Html.ValidationMessageFor(model=>re.Request.RequestBloodQuantity,"")</span>
+            </div>
+
+            @* enum *
+            <div class="my-4">
+                <label for="StatusOfBlood">Status Of Blood</label>
+                <select class="form-control form-select" id="StatusOfBlood" name="StatusOfBlood" required>
+                    @{
+                        if (re.Request.RequestStatus.ToString() == "Fresh")
+                        {
+                            <option value="Fresh" selected>Fresh</option>
+                        }
+                        else
+                        {
+                            <option value="Fresh">Fresh</option>
+                        }
+
+                        if (re.Request.RequestStatus.ToString() == "NotFresh")
+                        {
+                            <option value="NotFresh" selected>Not Fresh</option>
+                        }
+                        else
+                        {
+                            <option value="NotFresh">Not Fresh</option>
+                        }
+                    }
+                </select>
+                <span class="text-danger">@Html.ValidationMessageFor(model=>re.Request.RequestStatus,"")</span>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center my-4">
+                <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>
+            </div>
+        </form> *@
+    }
+}

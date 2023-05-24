@@ -6,12 +6,40 @@
     <link href="~/css/glyphicon.css" rel="stylesheet">
 </head>
 <body class="body">
-    <form class="form-inline" method="get" asp-controller="Employee" asp-action="Search2">
-        <div class="input-group">
-            <input type="search" class="form-control mx-3" name="id" placeholder="search by id">
-            <section class="input-group-append">
-                <button type="submit"><span class="glyphicon glyphicon-search"></span>Search</button>
-            </section>
+    <form class="form-inline" asp-controller="Employee" asp-action="SearchForEmployeeByEveryThing" method="get">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="id" placeholder="Search by id">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="name" placeholder="Search by name">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="age" placeholder="Search by age">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="address" placeholder="Search by address">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <input type="search" class="form-control mx-3 mb-2" name="function" placeholder="Search by function">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group d-flex justify-content-center align-items-center">
+                    <section class="input-group-append">
+                        <button type="submit" class="btn btn-outline-danger"><span class="glyphicon glyphicon-search"></span>Search</button>
+                    </section>
+                </div>
+            </div>
         </div>
     </form>
     <table class="table">
@@ -27,8 +55,8 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Function</th>
-                <th>Image</th>
                 <th>Image itself</th>
+                <th>BloodBankID</th>
             </tr>
         </thead>
         <!-- Demonstrait the body -->
@@ -44,12 +72,12 @@
                             <td>@el.EmployeeID</td>
                             <td>@el.EmployeeName</td>
                             <td>@el.EmployeeAge</td>
-                            <td>@el.EmployeeAddress</td>
-                            <td>@el.EmployeeEmail</td>
                             <td>@el.EmployeePhone</td>
+                            <td>@el.EmployeeEmail</td>
+                            <td>@el.EmployeeAddress</td>
                             <td>@el.Field</td>
-                            <td>@el.ImageName.Substring(el.ImageName.IndexOf("Img\\") + 4)</td>
                             <td><img src="@el.ImageName" width="80px" height="80px"></td>
+                            <td>@el.BloodBankId</td>
                         </tr>
                     }
                 }
@@ -65,9 +93,6 @@
         </div>
         <div class="button-div px-4">
             <button><a class="text-white" asp-controller="Employee" asp-action="Delete">Delete</a></button>
-        </div>
-        <div class="button-div px-4">
-            <button><a class="text-white" asp-controller="Employee" asp-action="Show">Show hiddens</a></button>
         </div>
     </div>
 </body>

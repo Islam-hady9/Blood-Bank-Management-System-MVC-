@@ -1,31 +1,225 @@
 ﻿@{
-    ViewData["Title"] = "Update";
+    ViewData["Title"] = "Update Donor";
 }
-<h1 class="d-flex justify-content-center align-items-center">Delete view for deleting by id</h1>
-<form asp-controller="Donor" asp-action="Search" method="post" enctype="multipart/form-data">
+
+<h1 class="d-flex justify-content-center align-items-center">View for updating the donor</h1>
+<form asp-controller="Donor" asp-action="GetDonorDataById" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
-    @Model Donor;
+
     <div class="my-4">
-        <label>Id for deleting</label>
+        <label>Id for updating</label>
         <input type="text" class="form-control" name="id" required>
     </div>
-    
+
     <div class="d-flex justify-content-center align-items-center my-4">
         <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
     </div>
-    @if (Model != null)
-    {
-        <p class="card-text"><strong>ID:</strong> @Model.DonorID</p>
-        <p class="card-text"><strong>Name:</strong> @Model.DonorName</p>
-        <p class="card-text"><strong>Age:</strong> @Model.DonorAge</p>
-        <p class="card-text"><strong>Address:</strong> @Model.DonorAddress</p>
-        <p class="card-text"><strong>Phone:</strong> @Model.DonorPhone</p>
-        <p class="card-text"><strong>Gender:</strong> @Model.DonorGender</p>
-        <p class="card-text"><strong>Blood Type:</strong> @Model.DonorBloodType</p>
-        <p class="card-text"><strong>Last Donation Date:</strong> @Model.LastDonationDate</p>
-    }
-    else
-    {
-        <p class="card-text"><strong>Error:</strong> No delete until now.</p>
-    }
 </form>
+
+@model Donor;
+@if (Model != null)
+{
+    <h1 class="d-flex justify-content-center align-items-center">Donor data that you need to modify</h1>
+    <form asp-controller="Donor" asp-action="Update" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div class="my-4">
+            <label for="DonorName">Donor Name</label>
+            <input type="text" class="form-control" id="DonorName" name="DonorName" value="@Model.DonorName" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorName,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="DonorID">Donor ID</label>
+            <input type="text" class="form-control" id="DonorID" name="DonorID" value="@Model.DonorID" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorID,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="DonorPhone">Donor Phone</label>
+            <input type="text" class="form-control" id="DonorPhone" name="DonorPhone" value="@Model.DonorPhone" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorPhone,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="DonorAddress">Donor Address</label>
+            <input type="text" class="form-control" id="DonorAddress" name="DonorAddress" value="@Model.DonorAddress" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorAddress,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="DonorAge">Donor Age</label>
+            <input type="number" min="18" max="60" class="form-control" id="DonorAge" name="DonorAge" value="@Model.DonorAge" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorAge,"")</span>
+        </div>
+
+        @* enum *@
+        <div class="my-4">
+            <label for="DonorGender">Gender</label>
+            <select class="form-control form-select" id="DonorGender" name="DonorGender" required>
+                @{
+                    if (@Model.DonorGender.ToString() == "Male")
+                    {
+                        <option value="Male" selected>Male</option>
+                    }
+                    else
+                    {
+                        <option value="Male">Male</option>
+                    }
+
+                    if (@Model.DonorGender.ToString() == "Female")
+                    {
+                        <option value="Female" selected>Female</option>
+                    }
+                    else
+                    {
+                        <option value="Female">Female</option>
+                    }
+                }
+            </select>
+        </div>
+
+        @* enum *@
+        <div class="my-4">
+            <label for="DonorBloodType">Donor Blood Type</label>
+            <select class="form-control form-select" id="DonorBloodType" name="DonorBloodType" required>
+                @{
+                    if (Model.DonorBloodType.ToString() == "A")
+                    {
+                        <option value="A" selected>A</option>
+                    }
+                    else
+                    {
+                        <option value="A">A</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "B")
+                    {
+                        <option value="B" selected>B</option>
+                    }
+                    else
+                    {
+                        <option value="B">B</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "AB")
+                    {
+                        <option value="AB" selected>AB</option>
+                    }
+                    else
+                    {
+                        <option value="AB">AB</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "O")
+                    {
+                        <option value="O" selected>O</option>
+                    }
+                    else
+                    {
+                        <option value="O">O</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "Ap")
+                    {
+                        <option value="Ap" selected>A+</option>
+                    }
+                    else
+                    {
+                        <option value="Ap">A+</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "An")
+                    {
+                        <option value="An" selected>A-</option>
+                    }
+                    else
+                    {
+                        <option value="An">A-</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "Bp")
+                    {
+                        <option value="Bp" selected>B+</option>
+                    }
+                    else
+                    {
+                        <option value="Bp">B+</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "Bn")
+                    {
+                        <option value="Bn" selected>B-</option>
+                    }
+                    else
+                    {
+                        <option value="Bn">B-</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "ABp")
+                    {
+                        <option value="ABp" selected>AB+</option>
+                    }
+                    else
+                    {
+                        <option value="ABp">AB+</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "ABn")
+                    {
+                        <option value="ABn" selected>AB-</option>
+                    }
+                    else
+                    {
+                        <option value="ABn">AB-</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "Op")
+                    {
+                        <option value="Op" selected>O+</option>
+                    }
+                    else
+                    {
+                        <option value="Op">O+</option>
+                    }
+                    
+                    if (Model.DonorBloodType.ToString() == "On")
+                    {
+                        <option value="On" selected>O-</option>
+                    }
+                    else
+                    {
+                        <option value="On">O-</option>
+                    }
+                }
+            </select>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.DonorBloodType,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="LastDonationDate">Last Donation Date</label>
+            <input type="date" class="form-control" id="LastDonationDate" name="LastDonationDate" value="@Model.LastDonationDate.ToString("yyyy-MM-dd")" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.LastDonationDate,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="BloodBankId">BloodBank ID</label>
+            <input class="form-control" type="number" id="BloodBankId" name="BloodBankId" value="@Model.BloodBankId">
+            <span class="text-danger">Note: Do not modify the BloodBankId</span>
+        </div>
+        <div class="d-flex justify-content-center align-items-center my-4">
+            <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>
+        </div>
+    </form>
+}
+else
+{
+    <div class="container">
+        <div class="card bg-danger">
+            <div class="card-body" style="color: #ffdfdf;">
+                <h5 class="card-title">Donor Details</h5><hr>
+                <p class="card-text">No correct Donor id is entered.</p>
+            </div>
+        </div>
+    </div>
+}

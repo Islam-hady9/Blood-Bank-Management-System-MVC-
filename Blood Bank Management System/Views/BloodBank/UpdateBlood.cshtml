@@ -1,11 +1,9 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Title"] = "Update Blood Data";
 }
+
 <h1 class="d-flex justify-content-center align-items-center">Update Blood Bank Data</h1>
-<form asp-controller="BloodBank" asp-action="Update" method="post" enctype="multipart/form-data">
+<form asp-controller="BloodBank" asp-action="GetBloodBankDataById" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
 
     <div class="my-4">
@@ -17,3 +15,184 @@
         <button type="submit" class="btn btn-danger px-4 py-2 my-3">Apply</button>
     </div>
 </form>
+
+@* Form to modify data in *@
+@model BloodBank;
+@if (Model != null)
+{
+    <h1 class="d-flex justify-content-center align-items-center">BloodBank data that you need to modify</h1>
+    <form asp-controller="BloodBank" asp-action="UpdateBloodBank" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div class="my-4">
+            <label for="BloodBankEmail">Blood Bank Email</label>
+            <input type="email" class="form-control" id="BloodBankEmail" name="BloodBankEmail" value="@Model.BloodBankEmail" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.BloodBankEmail,"")</span>
+        </div>
+
+        @* enum *@
+        <div class="my-4">
+            <label for="BloodGroup">Blood Groups</label>
+            <select class="form-control form-select" id="BloodGroup" name="BloodGroup" required>
+                @{
+                    if (Model.BloodGroup.ToString() == "A")
+                    {
+                        <option value="A" selected>A</option>
+                    }
+                    else
+                    {
+                        <option value="A">A</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "B")
+                    {
+                        <option value="B" selected>B</option>
+                    }
+                    else
+                    {
+                        <option value="B">B</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "AB")
+                    {
+                        <option value="AB" selected>AB</option>
+                    }
+                    else
+                    {
+                        <option value="AB">AB</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "O")
+                    {
+                        <option value="O" selected>O</option>
+                    }
+                    else
+                    {
+                        <option value="O">O</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "Ap")
+                    {
+                        <option value="Ap" selected>A+</option>
+                    }
+                    else
+                    {
+                        <option value="Ap">A+</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "An")
+                    {
+                        <option value="An" selected>A-</option>
+                    }
+                    else
+                    {
+                        <option value="An">A-</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "Bp")
+                    {
+                        <option value="Bp" selected>B+</option>
+                    }
+                    else
+                    {
+                        <option value="Bp">B+</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "Bn")
+                    {
+                        <option value="Bn" selected>B-</option>
+                    }
+                    else
+                    {
+                        <option value="Bn">B-</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "ABp")
+                    {
+                        <option value="ABp" selected>AB+</option>
+                    }
+                    else
+                    {
+                        <option value="ABp">AB+</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "ABn")
+                    {
+                        <option value="ABn" selected>AB-</option>
+                    }
+                    else
+                    {
+                        <option value="ABn">AB-</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "Op")
+                    {
+                        <option value="Op" selected>O+</option>
+                    }
+                    else
+                    {
+                        <option value="Op">O+</option>
+                    }
+                    
+                    if (Model.BloodGroup.ToString() == "On")
+                    {
+                        <option value="On" selected>O-</option>
+                    }
+                    else
+                    {
+                        <option value="On">O-</option>
+                    }
+                }
+            </select>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.BloodGroup,"")</span>
+        </div>
+
+        <div class="my-4">
+            <label for="BloodBankQuantity">BloodBankQuantity</label>
+            <input type="number" min="0" max="5" class="form-control" id="BloodBankQuantity" name="BloodBankQuantity" value="@Model.BloodBankQuantity" required>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.BloodBankQuantity,"")</span>
+        </div>
+
+        @* enum *@
+        <div class="my-4">
+            <label for="StatusOfBlood">Status Of Blood</label>
+            <select class="form-control form-select" id="StatusOfBlood" name="StatusOfBlood" required>
+                @{
+                    if (Model.StatusOfBlood.ToString() == "Fresh")
+                    {
+                        <option value="Fresh" selected>Fresh</option>
+                    }
+                    else
+                    {
+                        <option value="Fresh">Fresh</option>
+                    }
+
+                    if (Model.StatusOfBlood.ToString() == "NotFresh")
+                    {
+                        <option value="NotFresh" selected>Not Fresh</option>
+                    }
+                    else
+                    {
+                        <option value="NotFresh">Not Fresh</option>
+                    }
+                }
+            </select>
+            <span class="text-danger">@Html.ValidationMessageFor(model=>model.StatusOfBlood,"")</span>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center my-4">
+            <button type="submit" class="btn btn-danger px-4 py-2 my-3">Submit</button>
+        </div>
+    </form>
+}
+else
+{
+    <div class="container">
+        <div class="card bg-danger">
+            <div class="card-body" style="color: #ffdfdf;">
+                <h5 class="card-title">BloodBank Details</h5><hr>
+                <p class="card-text">No correct BloodBank id is entered.</p>
+            </div>
+        </div>
+    </div>
+}
